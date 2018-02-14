@@ -7,6 +7,7 @@ import android.app.Application;
  */
 
 public class MasnoonDuaApp extends Application {
+    public static final String TAG = "MasnoonDua";
     @Override
     public void onCreate() {
         super.onCreate();
