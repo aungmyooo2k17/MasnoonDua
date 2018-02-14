@@ -4,7 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mmucsy.masnoondua.MainActivity">
+    tools:context="com.mmucsy.masnoondua.activities.MainActivity">
+
+
+
+
+    <FrameLayout
+        android:id="@+id/main_frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation"
