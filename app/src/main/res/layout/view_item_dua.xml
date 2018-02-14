@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dua_list_back">
+
+
+    <net.aungpyaephyo.mmtextview.components.MMTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="မုစ်လင်မ်အချင်းချင်း တွေ့ဆုံသောအခါ နှုတ်ခွန်းဆက်သရန်"
+        android:textSize="@dimen/text_regular"
+        android:padding="@dimen/margin_medium_2" />
+
+
+
+</RelativeLayout>
