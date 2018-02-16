@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mmucsy.masnoondua.R;
-import com.mmucsy.masnoondua.delegates.DuaCategoryItemDelegate;
 import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
 import com.mmucsy.masnoondua.viewHolders.DuaViewHolder;
 
@@ -27,7 +26,7 @@ public class DuaAdapter extends RecyclerView.Adapter<DuaViewHolder> {
 
     @Override
     public DuaViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = mLayoutInflator.inflate(R.layout.view_item_dua, parent, false);
+        View v = mLayoutInflator.inflate(R.layout.view_dua_item, parent, false);
 
         return new DuaViewHolder(v, duaItemDelegate);
     }

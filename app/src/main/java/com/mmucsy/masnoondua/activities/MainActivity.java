@@ -1,5 +1,6 @@
 package com.mmucsy.masnoondua.activities;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.mmucsy.masnoondua.R;
+import com.mmucsy.masnoondua.delegates.MainPageItemDelegate;
 import com.mmucsy.masnoondua.fragments.FavouriteFragment;
 import com.mmucsy.masnoondua.fragments.HomeFragment;
 import com.mmucsy.masnoondua.fragments.RecentFragment;
@@ -17,7 +19,7 @@ import com.mmucsy.masnoondua.fragments.SearchFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, MainPageItemDelegate {
 
     @BindView(R.id.bottom_navigation)
     BottomNavigationView bottomNavigationView;
@@ -64,5 +66,17 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         transaction.replace(R.id.main_frame_container, fragment);
         transaction.commit();
 
+    }
+
+    @Override
+    public void onTapDuaItem() {
+        Intent i = new Intent(MainActivity.this, DuaDetailActivity.class);
+        startActivity(i);
+    }
+
+    @Override
+    public void onTapDuaCategory() {
+        Intent i = new Intent(MainActivity.this, DuaListActivity.class);
+        startActivity(i);
     }
 }

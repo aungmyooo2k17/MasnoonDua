@@ -24,6 +24,6 @@ public class DuaCategoryViewHolder extends RecyclerView.ViewHolder implements Vi
 
     @Override
     public void onClick(View v) {
-        Log.d(MasnoonDuaApp.TAG, "onClick: ");
+        duaCategoryItemDelegate.onTapDuaCategory();
     }
 }

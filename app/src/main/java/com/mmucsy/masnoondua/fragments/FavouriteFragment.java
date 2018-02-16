@@ -47,6 +47,6 @@ public class FavouriteFragment extends Fragment implements DuaItemDelegate{
 
     @Override
     public void onTapDua() {
-        
+
     }
 }

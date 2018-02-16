@@ -1,6 +1,7 @@
 package com.mmucsy.masnoondua.fragments;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.adapters.DuaAdapter;
 import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
+import com.mmucsy.masnoondua.delegates.MainPageItemDelegate;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,6 +26,8 @@ public class RecentFragment extends Fragment implements DuaItemDelegate{
     @BindView(R.id.rv_recent)
     RecyclerView recyclerViewRecent;
 
+    private MainPageItemDelegate mMainPageItemDelegate;
+
     private DuaAdapter duaAdapter;
 
 
@@ -31,6 +35,12 @@ public class RecentFragment extends Fragment implements DuaItemDelegate{
         // Required empty public constructor
     }
 
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mMainPageItemDelegate = (MainPageItemDelegate) context;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,6 +58,6 @@ public class RecentFragment extends Fragment implements DuaItemDelegate{
 
     @Override
     public void onTapDua() {
-
+        mMainPageItemDelegate.onTapDuaItem();
     }
 }

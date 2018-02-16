@@ -21,6 +21,6 @@ public class DuaViewHolder extends RecyclerView.ViewHolder implements View.OnCli
 
     @Override
     public void onClick(View v) {
-
+        duaItemDelegate.onTapDua();
     }
 }

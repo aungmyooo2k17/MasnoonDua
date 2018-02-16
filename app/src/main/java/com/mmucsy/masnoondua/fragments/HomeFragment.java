@@ -1,6 +1,7 @@
 package com.mmucsy.masnoondua.fragments;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.adapters.DuaCategoryAdapter;
 import com.mmucsy.masnoondua.delegates.DuaCategoryItemDelegate;
+import com.mmucsy.masnoondua.delegates.MainPageItemDelegate;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -19,17 +21,25 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment implements DuaCategoryItemDelegate{
+public class HomeFragment extends Fragment implements DuaCategoryItemDelegate {
 
-    @BindView(R.id.rv_category)RecyclerView recyclerViewCategory;
+    @BindView(R.id.rv_category)
+    RecyclerView recyclerViewCategory;
 
     private DuaCategoryAdapter duaCategoryAdapter;
+    private MainPageItemDelegate mainPageItemDelegate;
 
 
     public HomeFragment() {
         // Required empty public constructor
     }
 
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mainPageItemDelegate = (MainPageItemDelegate) context;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,6 +57,6 @@ public class HomeFragment extends Fragment implements DuaCategoryItemDelegate{
 
     @Override
     public void onTapDuaCategory() {
-
+        mainPageItemDelegate.onTapDuaCategory();
     }
 }
