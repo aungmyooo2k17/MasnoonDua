@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bathroom" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/light_dark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <net.aungpyaephyo.mmtextview.components.MMTextView
+            android:id="@+id/tv_dua_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="မုစ်လင်မ်အချင်းချင်း တွေ့ဆုံသောအခါ နှုတ်ခွန်းဆက်သရန်"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/tv_dua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/margin_medium_2"
+            android:paddingLeft="@dimen/margin_medium_2"
+            android:paddingRight="@dimen/margin_medium_2"
+            android:text=" اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُه"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_dua_recent" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -12,7 +12,9 @@ import android.view.ViewGroup;
 
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.adapters.DuaAdapter;
+import com.mmucsy.masnoondua.adapters.DuaRecentAdapter;
 import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
+import com.mmucsy.masnoondua.delegates.DuaRecentItemDelegate;
 import com.mmucsy.masnoondua.delegates.MainPageItemDelegate;
 
 import butterknife.BindView;
@@ -21,14 +23,14 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RecentFragment extends Fragment implements DuaItemDelegate{
+public class RecentFragment extends Fragment implements DuaRecentItemDelegate{
 
     @BindView(R.id.rv_recent)
     RecyclerView recyclerViewRecent;
 
     private MainPageItemDelegate mMainPageItemDelegate;
 
-    private DuaAdapter duaAdapter;
+    private DuaRecentAdapter duaRecentAdapter;
 
 
     public RecentFragment() {
@@ -49,15 +51,16 @@ public class RecentFragment extends Fragment implements DuaItemDelegate{
 
         ButterKnife.bind(this, v);
 
-        duaAdapter = new DuaAdapter(getContext(), this);
+        duaRecentAdapter = new DuaRecentAdapter(getContext(), this);
         recyclerViewRecent.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-        recyclerViewRecent.setAdapter(duaAdapter);
+        recyclerViewRecent.setAdapter(duaRecentAdapter);
 
         return v;
     }
 
+
     @Override
-    public void onTapDua() {
-        mMainPageItemDelegate.onTapDuaItem();
+    public void onTapDuaRecentItem() {
+
     }
 }

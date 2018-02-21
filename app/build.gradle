@@ -34,4 +34,8 @@ dependencies {
 
     //MMTextView
     implementation 'net.aungpyaephyo:mmtextview:1.1'
+
+    // Room (use 1.1.0-alpha2 for latest alpha)
+    implementation "android.arch.persistence.room:runtime:1.0.0"
+    annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
 }
