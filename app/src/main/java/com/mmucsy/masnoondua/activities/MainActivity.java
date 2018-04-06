@@ -16,6 +16,8 @@ import com.mmucsy.masnoondua.fragments.HomeFragment;
 import com.mmucsy.masnoondua.fragments.RecentFragment;
 import com.mmucsy.masnoondua.fragments.SearchFragment;
 
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     @BindView(R.id.bottom_navigation)
     BottomNavigationView bottomNavigationView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         ButterKnife.bind(this);
 
         loadFragment(new HomeFragment());
+
+
 
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 

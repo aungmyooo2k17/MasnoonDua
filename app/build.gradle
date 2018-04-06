@@ -9,6 +9,17 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":
+                                     "$projectDir/schemas".toString()]
+            }
+        }
+
+        sourceSets {
+            androidTest.assets.srcDirs +=
+                    files("$projectDir/schemas".toString())
+        }
     }
     buildTypes {
         release {
@@ -35,7 +46,11 @@ dependencies {
     //MMTextView
     implementation 'net.aungpyaephyo:mmtextview:1.1'
 
+    /*
     // Room (use 1.1.0-alpha2 for latest alpha)
     implementation "android.arch.persistence.room:runtime:1.0.0"
     annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
+    */
+
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
 }

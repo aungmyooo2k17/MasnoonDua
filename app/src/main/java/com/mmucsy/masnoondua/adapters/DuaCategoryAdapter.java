@@ -10,6 +10,8 @@ import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.delegates.DuaCategoryItemDelegate;
 import com.mmucsy.masnoondua.viewHolders.DuaCategoryViewHolder;
 
+import java.util.List;
+
 /**
  * Created by aungmyooo on 2/14/18.
  */
@@ -18,16 +20,17 @@ public class DuaCategoryAdapter extends RecyclerView.Adapter<DuaCategoryViewHold
 
     private LayoutInflater mLayoutInflator;
     private DuaCategoryItemDelegate duaCategoryItemDelegate;
+//    private Category category;
 
     public DuaCategoryAdapter(Context context, DuaCategoryItemDelegate duaCategoryItemDelegate) {
         mLayoutInflator = LayoutInflater.from(context);
         this.duaCategoryItemDelegate = duaCategoryItemDelegate;
+//        this.category = new Category();
     }
 
     @Override
     public DuaCategoryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = mLayoutInflator.inflate(R.layout.view_item_dua_category, parent, false);
-
 
 
         return new DuaCategoryViewHolder(v, duaCategoryItemDelegate);
@@ -40,6 +43,6 @@ public class DuaCategoryAdapter extends RecyclerView.Adapter<DuaCategoryViewHold
 
     @Override
     public int getItemCount() {
-        return 8;
+        return 10;
     }
 }

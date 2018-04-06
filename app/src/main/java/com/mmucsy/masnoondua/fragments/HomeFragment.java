@@ -15,6 +15,8 @@ import com.mmucsy.masnoondua.adapters.DuaCategoryAdapter;
 import com.mmucsy.masnoondua.delegates.DuaCategoryItemDelegate;
 import com.mmucsy.masnoondua.delegates.MainPageItemDelegate;
 
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -59,4 +61,5 @@ public class HomeFragment extends Fragment implements DuaCategoryItemDelegate {
     public void onTapDuaCategory() {
         mainPageItemDelegate.onTapDuaCategory();
     }
+
 }
