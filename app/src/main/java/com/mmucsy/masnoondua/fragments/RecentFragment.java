@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.adapters.DuaAdapter;
 import com.mmucsy.masnoondua.adapters.DuaRecentAdapter;
@@ -51,7 +52,7 @@ public class RecentFragment extends Fragment implements DuaRecentItemDelegate{
 
         ButterKnife.bind(this, v);
 
-        duaRecentAdapter = new DuaRecentAdapter(getContext(), this);
+        duaRecentAdapter = new DuaRecentAdapter(getContext(), this, MasnoonDuaApp.duaList);
         recyclerViewRecent.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         recyclerViewRecent.setAdapter(duaRecentAdapter);
 

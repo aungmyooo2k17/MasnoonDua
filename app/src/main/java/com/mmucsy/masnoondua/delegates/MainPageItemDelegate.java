@@ -6,5 +6,5 @@ package com.mmucsy.masnoondua.delegates;
 
 public interface MainPageItemDelegate {
     void onTapDuaItem();
-    void onTapDuaCategory();
+    void onTapDuaCategory(int pos);
 }

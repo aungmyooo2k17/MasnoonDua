@@ -7,11 +7,11 @@
         android:icon="@drawable/ic_favorite"
         android:title="@string/text_favorites" />
     <item
-        android:id="@+id/action_share_dua"
+        android:id="@+id/action_copy_dua"
         android:icon="@drawable/ic_content_copy"
         android:title="@string/text_copy" />
     <item
-        android:id="@+id/action_copy_dua"
+        android:id="@+id/action_share_dua"
         android:icon="@drawable/ic_share"
         android:title="@string/text_share" />
 

@@ -6,12 +6,17 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.adapters.DuaCategoryAdapter;
+import com.mmucsy.masnoondua.data.db.DatabaseAccess;
+import com.mmucsy.masnoondua.data.models.Category;
+import com.mmucsy.masnoondua.data.models.Dua;
 import com.mmucsy.masnoondua.delegates.DuaCategoryItemDelegate;
 import com.mmucsy.masnoondua.delegates.MainPageItemDelegate;
 
@@ -30,6 +35,8 @@ public class HomeFragment extends Fragment implements DuaCategoryItemDelegate {
 
     private DuaCategoryAdapter duaCategoryAdapter;
     private MainPageItemDelegate mainPageItemDelegate;
+    private List<Category> categoryList;
+
 
 
     public HomeFragment() {
@@ -49,7 +56,8 @@ public class HomeFragment extends Fragment implements DuaCategoryItemDelegate {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, v);
 
-        duaCategoryAdapter = new DuaCategoryAdapter(getContext(), this);
+
+        duaCategoryAdapter = new DuaCategoryAdapter(getContext(), this, MasnoonDuaApp.categoryList);
         recyclerViewCategory.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         recyclerViewCategory.setAdapter(duaCategoryAdapter);
 
@@ -58,8 +66,8 @@ public class HomeFragment extends Fragment implements DuaCategoryItemDelegate {
     }
 
     @Override
-    public void onTapDuaCategory() {
-        mainPageItemDelegate.onTapDuaCategory();
+    public void onTapDuaCategory(int pos) {
+        mainPageItemDelegate.onTapDuaCategory(pos);
     }
 
 }

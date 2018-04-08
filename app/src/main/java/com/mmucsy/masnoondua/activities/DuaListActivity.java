@@ -7,9 +7,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
+import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.adapters.DuaAdapter;
+import com.mmucsy.masnoondua.data.db.DatabaseAccess;
+import com.mmucsy.masnoondua.data.models.Dua;
 import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,6 +28,7 @@ public class DuaListActivity extends AppCompatActivity implements DuaItemDelegat
     Toolbar toolbar;
 
     private DuaAdapter duaAdapter;
+    private int duaCategoryPos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,18 +36,30 @@ public class DuaListActivity extends AppCompatActivity implements DuaItemDelegat
         setContentView(R.layout.activity_dua_list);
         ButterKnife.bind(this);
 
+        duaCategoryPos = getIntent().getExtras().getInt("POSITION");
+        DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
+        databaseAccess.open();
+        List<Dua> duaList = databaseAccess.getDuaByCategoryId(duaCategoryPos);
+        databaseAccess.close();
+
+
+
+
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setTitle("BATHROOM");
 
-        duaAdapter = new DuaAdapter(this, this);
+        duaAdapter = new DuaAdapter(this, this, duaList);
         recyclerViewDuaList.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerViewDuaList.setAdapter(duaAdapter);
     }
 
     @Override
-    public void onTapDua() {
+    public void onTapDua(int position, int itemPosition) {
         Intent i = new Intent(DuaListActivity.this, DuaDetailActivity.class);
+        i.putExtra("ONTAP_POS", itemPosition);
+        i.putExtra("DUA_CATEGORY", duaCategoryPos);
         startActivity(i);
     }
 }

@@ -8,6 +8,9 @@ public class Category {
 
     private String category;
 
+    public Category() {
+    }
+
     public int getCategory_id() {
         return category_id;
     }

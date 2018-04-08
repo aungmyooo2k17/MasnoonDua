@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.adapters.DuaAdapter;
 import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
@@ -38,7 +39,7 @@ public class FavouriteFragment extends Fragment implements DuaItemDelegate{
         View v = inflater.inflate(R.layout.fragment_favourite, container, false);
         ButterKnife.bind(this, v);
 
-        duaAdapter = new DuaAdapter(getContext(), this);
+        duaAdapter = new DuaAdapter(getContext(), this, MasnoonDuaApp.duaList);
         recyclerViewFavourite.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         recyclerViewFavourite.setAdapter(duaAdapter);
 
@@ -46,7 +47,7 @@ public class FavouriteFragment extends Fragment implements DuaItemDelegate{
     }
 
     @Override
-    public void onTapDua() {
+    public void onTapDua(int pos, int itemPos) {
 
     }
 }

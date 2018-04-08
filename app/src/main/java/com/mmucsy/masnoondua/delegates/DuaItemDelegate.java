@@ -5,5 +5,5 @@ package com.mmucsy.masnoondua.delegates;
  */
 
 public interface DuaItemDelegate {
-    void onTapDua();
+    void onTapDua(int position, int itemPosition);
 }

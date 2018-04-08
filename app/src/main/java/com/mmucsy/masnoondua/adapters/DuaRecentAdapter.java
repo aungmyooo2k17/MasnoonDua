@@ -6,10 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
+import com.mmucsy.masnoondua.data.models.Dua;
 import com.mmucsy.masnoondua.delegates.DuaRecentItemDelegate;
 import com.mmucsy.masnoondua.viewHolders.DuaCategoryViewHolder;
 import com.mmucsy.masnoondua.viewHolders.DuaRecentViewHolder;
+
+import java.util.List;
 
 /**
  * Created by aungmyooo on 2/18/18.
@@ -19,10 +23,13 @@ public class DuaRecentAdapter extends RecyclerView.Adapter<DuaRecentViewHolder> 
 
     private LayoutInflater mLayoutInflator;
     private DuaRecentItemDelegate duaRecentItemDelegate;
+    private List<Dua> duaList;
 
-    public DuaRecentAdapter(Context context, DuaRecentItemDelegate duaRecentItemDelegate) {
+    public DuaRecentAdapter(Context context, DuaRecentItemDelegate duaRecentItemDelegate, List<Dua> duaList) {
         mLayoutInflator = LayoutInflater.from(context);
         this.duaRecentItemDelegate = duaRecentItemDelegate;
+        this.duaList = duaList;
+
 
 
     }
@@ -33,16 +40,16 @@ public class DuaRecentAdapter extends RecyclerView.Adapter<DuaRecentViewHolder> 
 
 
 
-        return new DuaRecentViewHolder(v, duaRecentItemDelegate);
+        return new DuaRecentViewHolder(v, duaRecentItemDelegate, duaList);
     }
 
     @Override
     public void onBindViewHolder(DuaRecentViewHolder holder, int position) {
-
+        holder.bind(position);
     }
 
     @Override
     public int getItemCount() {
-        return 7;
+        return duaList.size();
     }
 }

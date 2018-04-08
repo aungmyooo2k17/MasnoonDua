@@ -14,6 +14,17 @@ public class Dua {
 
     private int category_id;
 
+    public Dua() {
+
+    }
+
+    public Dua(String duaTitle, String duaArbic, String duaDescription, int category_id) {
+        this.duaTitle = duaTitle;
+        this.duaArbic = duaArbic;
+        this.duaDescription = duaDescription;
+        this.category_id = category_id;
+    }
+
     public int getDua_id() {
         return dua_id;
     }
