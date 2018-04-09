@@ -43,6 +43,8 @@ public class DuaAdapter extends RecyclerView.Adapter<DuaViewHolder> {
 
     @Override
     public int getItemCount() {
+
+
         return duaTitleListByCategoryId.size();
     }
 }

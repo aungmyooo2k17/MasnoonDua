@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dua_list_back">
+
+
+    <net.aungpyaephyo.mmtextview.components.MMTextView
+        android:id="@+id/fav_dua_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_medium_2"
+        android:text="မုစ်လင်မ်အချင်းချင်း တွေ့"
+        android:textColor="@color/text_icon_color"
+        android:textSize="@dimen/text_small" />
+
+    <Button
+        android:id="@+id/btn_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/fav_dua_title"
+        android:text="Remove"/>
+
+
+</RelativeLayout>

@@ -5,13 +5,17 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
+import com.mmucsy.masnoondua.SharedPreference;
 import com.mmucsy.masnoondua.adapters.DuaAdapter;
+import com.mmucsy.masnoondua.adapters.FavoriteDuaAdapter;
 import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
 
 import butterknife.BindView;
@@ -20,12 +24,13 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FavouriteFragment extends Fragment implements DuaItemDelegate{
+public class FavouriteFragment extends Fragment implements DuaItemDelegate {
 
     @BindView(R.id.rv_favourite)
     RecyclerView recyclerViewFavourite;
 
-    private DuaAdapter duaAdapter;
+    private FavoriteDuaAdapter duaAdapter;
+    SharedPreference sharedPreference = new SharedPreference();
 
 
     public FavouriteFragment() {
@@ -39,7 +44,7 @@ public class FavouriteFragment extends Fragment implements DuaItemDelegate{
         View v = inflater.inflate(R.layout.fragment_favourite, container, false);
         ButterKnife.bind(this, v);
 
-        duaAdapter = new DuaAdapter(getContext(), this, MasnoonDuaApp.duaList);
+        duaAdapter = new FavoriteDuaAdapter(getContext(), this, sharedPreference.getFavorites(getActivity()));
         recyclerViewFavourite.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         recyclerViewFavourite.setAdapter(duaAdapter);
 
@@ -48,6 +53,15 @@ public class FavouriteFragment extends Fragment implements DuaItemDelegate{
 
     @Override
     public void onTapDua(int pos, int itemPos) {
+        Log.i("FavoriteDuaAdapter",itemPos+"");
+        duaAdapter.remove(getActivity(),itemPos);
+
+
+//        sharedPreference.removeFavorite(getActivity(),itemPos);
+//        duaAdapter.notifyItemRemoved(itemPos);
+//        duaAdapter.notifyItemRangeChanged(itemPos, sharedPreference.getFavorites(getActivity()).size());
+
+
 
     }
 }

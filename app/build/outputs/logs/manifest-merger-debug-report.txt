@@ -1,0 +1,201 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-34:12
+MERGED from [com.android.support:design:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/38076ad077ad079d72f6d0d5dbe118b2/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f48b1acaaaadee7d248c0567ef71085b/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/soe_than/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/0af1174cd3d3b3524718192f96231e3d/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:transition:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/811867e2e10ca230a5d99a1e09d8b09c/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f0f7bc956be7f4bf74ac616e44419fc3/AndroidManifest.xml:17:1-31:12
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/soe_than/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/e148204e0ef02ba86e4dc813297ca36f/AndroidManifest.xml:2:1-7:12
+MERGED from [net.aungpyaephyo:mmtextview:1.1] /home/soe_than/.gradle/caches/transforms-1/files-1.1/mmtextview-1.1.aar/3bfbcb0cbe172b2896cc8f614ac2c0f0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/b35891b461f6242811307aa7660cff9b/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0f028edd3348a09a15c22164325d5c15/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/68b42a6987ca153d3649c8c78c4a8bc1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/5ebc8ed2d7d18a8640950d5c348a1241/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/6a3b6f6deb8766d8f26f7924b76e23c7/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/701d765c7ac94b766dc7d89dc88d551a/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/17e7d68131e444ee26ce4446384b5946/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/66799f671c5f73947d68f37406b9913f/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/e7d921882bd31a2e34b3e15fd2984250/AndroidManifest.xml:17:1-30:12
+INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-34:12
+	package
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:3:5-36
+		INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
+		INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-34:12
+		INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-34:12
+		INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:5:5-81
+	android:name
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:5:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:6:22-77
+application
+ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:9:5-32:19
+MERGED from [com.android.support:design:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/38076ad077ad079d72f6d0d5dbe118b2/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/38076ad077ad079d72f6d0d5dbe118b2/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f48b1acaaaadee7d248c0567ef71085b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f48b1acaaaadee7d248c0567ef71085b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/soe_than/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/0af1174cd3d3b3524718192f96231e3d/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/soe_than/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/0af1174cd3d3b3524718192f96231e3d/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:transition:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/811867e2e10ca230a5d99a1e09d8b09c/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/811867e2e10ca230a5d99a1e09d8b09c/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f0f7bc956be7f4bf74ac616e44419fc3/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f0f7bc956be7f4bf74ac616e44419fc3/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/b35891b461f6242811307aa7660cff9b/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/b35891b461f6242811307aa7660cff9b/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0f028edd3348a09a15c22164325d5c15/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0f028edd3348a09a15c22164325d5c15/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/68b42a6987ca153d3649c8c78c4a8bc1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/68b42a6987ca153d3649c8c78c4a8bc1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/5ebc8ed2d7d18a8640950d5c348a1241/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/5ebc8ed2d7d18a8640950d5c348a1241/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/6a3b6f6deb8766d8f26f7924b76e23c7/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/6a3b6f6deb8766d8f26f7924b76e23c7/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/701d765c7ac94b766dc7d89dc88d551a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/701d765c7ac94b766dc7d89dc88d551a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/17e7d68131e444ee26ce4446384b5946/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/17e7d68131e444ee26ce4446384b5946/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/66799f671c5f73947d68f37406b9913f/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/66799f671c5f73947d68f37406b9913f/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/e7d921882bd31a2e34b3e15fd2984250/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/e7d921882bd31a2e34b3e15fd2984250/AndroidManifest.xml:24:5-28:19
+	android:supportsRtl
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:15:9-35
+	android:label
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:13:9-41
+	android:roundIcon
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:14:9-54
+	android:icon
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:12:9-43
+	android:allowBackup
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:16:9-40
+	android:name
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:10:9-38
+activity#com.mmucsy.masnoondua.activities.MainActivity
+ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:17:9-25:20
+	android:theme
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:19:13-56
+	android:name
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:18:13-52
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:20:13-24:29
+action#android.intent.action.MAIN
+ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:23:27-74
+activity#com.mmucsy.masnoondua.activities.DuaDetailActivity
+ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:26:9-28:59
+	android:theme
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:28:13-56
+	android:name
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:27:13-57
+activity#com.mmucsy.masnoondua.activities.DuaListActivity
+ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:29:9-31:68
+	android:theme
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:31:13-56
+	android:name
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:30:13-55
+uses-sdk
+INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
+INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/38076ad077ad079d72f6d0d5dbe118b2/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/38076ad077ad079d72f6d0d5dbe118b2/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f48b1acaaaadee7d248c0567ef71085b/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f48b1acaaaadee7d248c0567ef71085b/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/soe_than/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/0af1174cd3d3b3524718192f96231e3d/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/soe_than/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/0af1174cd3d3b3524718192f96231e3d/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:transition:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/811867e2e10ca230a5d99a1e09d8b09c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/811867e2e10ca230a5d99a1e09d8b09c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f0f7bc956be7f4bf74ac616e44419fc3/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f0f7bc956be7f4bf74ac616e44419fc3/AndroidManifest.xml:21:5-23:54
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/soe_than/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/e148204e0ef02ba86e4dc813297ca36f/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/soe_than/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/e148204e0ef02ba86e4dc813297ca36f/AndroidManifest.xml:5:5-43
+MERGED from [net.aungpyaephyo:mmtextview:1.1] /home/soe_than/.gradle/caches/transforms-1/files-1.1/mmtextview-1.1.aar/3bfbcb0cbe172b2896cc8f614ac2c0f0/AndroidManifest.xml:7:5-9:41
+MERGED from [net.aungpyaephyo:mmtextview:1.1] /home/soe_than/.gradle/caches/transforms-1/files-1.1/mmtextview-1.1.aar/3bfbcb0cbe172b2896cc8f614ac2c0f0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/b35891b461f6242811307aa7660cff9b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/b35891b461f6242811307aa7660cff9b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0f028edd3348a09a15c22164325d5c15/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0f028edd3348a09a15c22164325d5c15/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/68b42a6987ca153d3649c8c78c4a8bc1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/68b42a6987ca153d3649c8c78c4a8bc1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/5ebc8ed2d7d18a8640950d5c348a1241/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/5ebc8ed2d7d18a8640950d5c348a1241/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/6a3b6f6deb8766d8f26f7924b76e23c7/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/6a3b6f6deb8766d8f26f7924b76e23c7/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/701d765c7ac94b766dc7d89dc88d551a/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/701d765c7ac94b766dc7d89dc88d551a/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/17e7d68131e444ee26ce4446384b5946/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/17e7d68131e444ee26ce4446384b5946/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/66799f671c5f73947d68f37406b9913f/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/66799f671c5f73947d68f37406b9913f/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/e7d921882bd31a2e34b3e15fd2984250/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/e7d921882bd31a2e34b3e15fd2984250/AndroidManifest.xml:20:5-22:41
+INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
+INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/38076ad077ad079d72f6d0d5dbe118b2/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
+		INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
+		ADDED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
+		INJECTED from /home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/38076ad077ad079d72f6d0d5dbe118b2/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f48b1acaaaadee7d248c0567ef71085b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f48b1acaaaadee7d248c0567ef71085b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:transition:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/811867e2e10ca230a5d99a1e09d8b09c/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/811867e2e10ca230a5d99a1e09d8b09c/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f0f7bc956be7f4bf74ac616e44419fc3/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f0f7bc956be7f4bf74ac616e44419fc3/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/b35891b461f6242811307aa7660cff9b/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/b35891b461f6242811307aa7660cff9b/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0f028edd3348a09a15c22164325d5c15/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0f028edd3348a09a15c22164325d5c15/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/68b42a6987ca153d3649c8c78c4a8bc1/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/68b42a6987ca153d3649c8c78c4a8bc1/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/5ebc8ed2d7d18a8640950d5c348a1241/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/5ebc8ed2d7d18a8640950d5c348a1241/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/6a3b6f6deb8766d8f26f7924b76e23c7/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/6a3b6f6deb8766d8f26f7924b76e23c7/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/701d765c7ac94b766dc7d89dc88d551a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/701d765c7ac94b766dc7d89dc88d551a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/17e7d68131e444ee26ce4446384b5946/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/17e7d68131e444ee26ce4446384b5946/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/66799f671c5f73947d68f37406b9913f/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/66799f671c5f73947d68f37406b9913f/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:design:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/38076ad077ad079d72f6d0d5dbe118b2/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:design:26.1.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/38076ad077ad079d72f6d0d5dbe118b2/AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/e7d921882bd31a2e34b3e15fd2984250/AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/e7d921882bd31a2e34b3e15fd2984250/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/soe_than/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/e7d921882bd31a2e34b3e15fd2984250/AndroidManifest.xml:26:13-58

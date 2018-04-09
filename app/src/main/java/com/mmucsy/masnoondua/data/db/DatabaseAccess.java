@@ -7,12 +7,17 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.google.gson.Gson;
 import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.data.models.Category;
 import com.mmucsy.masnoondua.data.models.Dua;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+
+import static com.mmucsy.masnoondua.SharedPreference.FAVORITES;
+import static com.mmucsy.masnoondua.SharedPreference.PREFS_NAME;
 
 /**
  * Created by aungmyooo on 4/6/18.
@@ -165,6 +170,26 @@ public class DatabaseAccess {
         cursor.close();
         return list;
     }
+//    public ArrayList<Dua> getFavorites(Context context) {
+//        SharedPreferences settings;
+//        List<Dua> favorites;
+//
+//        settings = context.getSharedPreferences(PREFS_NAME,
+//                Context.MODE_PRIVATE);
+//
+//        if (settings.contains(FAVORITES)) {
+//            String jsonFavorites = settings.getString(FAVORITES, null);
+//            Gson gson = new Gson();
+//            Dua[] favoriteItems = gson.fromJson(jsonFavorites,
+//                    Dua[].class);
+//
+//            favorites = Arrays.asList(favoriteItems);
+//            favorites = new ArrayList<Dua>(favorites);
+//        } else
+//            return null;
+//
+//        return (ArrayList<Dua>) favorites;
+//    }
 
 
 

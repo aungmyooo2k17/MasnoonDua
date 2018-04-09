@@ -31,13 +31,11 @@ public class DuaRecentAdapter extends RecyclerView.Adapter<DuaRecentViewHolder> 
         this.duaList = duaList;
 
 
-
     }
 
     @Override
     public DuaRecentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = mLayoutInflator.inflate(R.layout.view_item_dua_recent, parent, false);
-
 
 
         return new DuaRecentViewHolder(v, duaRecentItemDelegate, duaList);
@@ -50,6 +48,7 @@ public class DuaRecentAdapter extends RecyclerView.Adapter<DuaRecentViewHolder> 
 
     @Override
     public int getItemCount() {
-        return duaList.size();
+        return duaList == null ? 0 : duaList.size();
+
     }
 }

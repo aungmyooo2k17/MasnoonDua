@@ -20,15 +20,17 @@ public class MasnoonDuaApp extends Application {
     public static List<Dua> duaList;
 
     public static DatabaseAccess databaseAccess;
+    public static SharedPreference sharedPreference;
     @Override
     public void onCreate() {
         super.onCreate();
+        sharedPreference=new SharedPreference();
         databaseAccess = DatabaseAccess.getInstance(this);
         databaseAccess.open();
         categoryList = databaseAccess.getCategory();
         duaTitleList = databaseAccess.getDuaTitle();
         duaArbicList = databaseAccess.getDuaArbic();
-        duaList = databaseAccess.getRecent();
+        duaList = sharedPreference.getFavorites(this);
         databaseAccess.close();
     }
 }

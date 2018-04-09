@@ -19,9 +19,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
+import com.mmucsy.masnoondua.SharedPreference;
 import com.mmucsy.masnoondua.data.db.DatabaseAccess;
 import com.mmucsy.masnoondua.data.models.Dua;
 
@@ -140,49 +142,57 @@ public class DuaViewPagerAdapter extends PagerAdapter {
     }
 
     public void addFavToThis(){
-        boolean t = true;
-        String[] favArr = loadArray("FAV_ARR", context);
-        List<String> favList = Arrays.asList(favArr);
-        if(!t) {
+        SharedPreference s=new SharedPreference();
+        s.addFavorite(context,duaList.get(pos));
+//        boolean t = true;
+//        String[] favArr = loadArray("FAV_ARR", context);
+//
+//        List<String> favList = Arrays.asList(favArr);
+//        if(!t) {
+//
+//
+//            if (favArr.length != 0) {
+//
+//            }
+//        }else{
+//
+//            favList.add(duaList.get(pos).getDua_id()+"");
+//            saveArray(favList, "FAV_ARR", context);
+//
+//        }
+//
+//        for (String e : favList) {
+//            Log.d(MasnoonDuaApp.TAG, "addFavToThis: "+e);
+//        }
 
-
-            if (favArr.length != 0) {
-
-            }
-        }else{
-
-            favList.add(duaList.get(pos).getDua_id()+"");
-            saveArray(favList, "FAV_ARR", context);
-
-        }
-
-        for (String e : favList) {
-            Log.d(MasnoonDuaApp.TAG, "addFavToThis: "+e);
-        }
-
+    }
+    public void removeFavFromThat()
+    {
+        SharedPreference shrd=new SharedPreference();
+        shrd.removeFavorite(context,pos);
     }
 
 
-    private String[] loadArray(String arrayName, Context mContext) {
-        SharedPreferences prefs = mContext.getSharedPreferences("GROUP", 0);
-        int size = prefs.getInt(arrayName + "_size", 0);
-//        String array[] = new String[size];
-        String[] arr = new String[size];
-        for (int i = 0; i < size; i++) {
-            arr[i] = prefs.getString(arrayName + "_" + i, null);
-        }
-        return arr;
-    }
-
-    private boolean saveArray(List<String> array, String arrayName, Context mContext) {
-        SharedPreferences prefs = mContext.getSharedPreferences("GROUP", 0);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putInt(arrayName +"_size", array.size());
-        for(int i=0;i<array.size();i++) {
-            editor.putString(arrayName + "_" + i, array.get(i));
-        }
-        return editor.commit();
-    }
+//    private String[] loadArray(String arrayName, Context mContext) {
+//        SharedPreferences prefs = mContext.getSharedPreferences("GROUP", 0);
+//        int size = prefs.getInt(arrayName + "_size", 0);
+////        String array[] = new String[size];
+//        String[] arr = new String[size];
+//        for (int i = 0; i < size; i++) {
+//            arr[i] = prefs.getString(arrayName + "_" + i, null);
+//        }
+//        return arr;
+//    }
+//
+//    private boolean saveArray(List<String> array, String arrayName, Context mContext) {
+//        SharedPreferences prefs = mContext.getSharedPreferences("GROUP", 0);
+//        SharedPreferences.Editor editor = prefs.edit();
+//        editor.putInt(arrayName +"_size", array.size());
+//        for(int i=0;i<array.size();i++) {
+//            editor.putString(arrayName + "_" + i, array.get(i));
+//        }
+//        return editor.commit();
+//    }
 
 
 
