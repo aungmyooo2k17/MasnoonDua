@@ -1,13 +1,40 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.mmucsy.masnoondua.fragments.FavouriteFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_favourite"
         android:layout_width="match_parent"
+        android:layout_margin="@dimen/margin_medium"
         android:layout_height="match_parent"/>
 
-</FrameLayout>
+    <RelativeLayout
+        android:id="@+id/rl_not_have_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/iv_no_fav"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_favorite"/>
+        <TextView
+            android:id="@+id/tv_no_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_no_fav"
+            android:layout_centerVertical="true"
+            android:textColor="#212121"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:text="Favourite လုပ္ထားေသာဒိုအာမရိွေသးပါ"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

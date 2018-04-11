@@ -3,6 +3,7 @@ package com.mmucsy.masnoondua.viewHolders;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mmucsy.masnoondua.MasnoonDuaApp;
@@ -28,7 +29,11 @@ public class DuaCategoryViewHolder extends RecyclerView.ViewHolder implements Vi
     private List<Category> categoryList;
     private int pos;
 
-    @BindView(R.id.tv_category)MMTextView tvCategory;
+    @BindView(R.id.tv_category)
+    TextView tvCategory;
+
+    @BindView(R.id.iv_category_type)
+    ImageView ivCategoryType;
 
 
     public DuaCategoryViewHolder(View itemView, DuaCategoryItemDelegate duaCategoryItemDelegate, List<Category> categoryList) {
@@ -40,13 +45,28 @@ public class DuaCategoryViewHolder extends RecyclerView.ViewHolder implements Vi
         itemView.setOnClickListener(this);
 
 
-
     }
 
 
-    public void bind(int position){
+    public void bind(int position) {
         pos = position;
-        tvCategory.setText(categoryList.get(position).getCategory()+"");
+        tvCategory.setTypeface(MasnoonDuaApp.typeface);
+        tvCategory.setText(categoryList.get(position).getCategory() + "");
+        int i = categoryList.get(position).getCategory_id();
+        if (i == 1) {
+            ivCategoryType.setImageDrawable(itemView.getContext().getResources().getDrawable(R.drawable.social));
+        }else if(i == 2){
+            ivCategoryType.setImageDrawable(itemView.getContext().getResources().getDrawable(R.drawable.trip));
+        }else if(i == 3){
+            ivCategoryType.setImageDrawable(itemView.getContext().getResources().getDrawable(R.drawable.namaz));
+        }else if(i == 4){
+            ivCategoryType.setImageDrawable(itemView.getContext().getResources().getDrawable(R.drawable.food));
+        }else if(i == 5){
+            ivCategoryType.setImageDrawable(itemView.getContext().getResources().getDrawable(R.drawable.daily));
+        }else if(i == 6){
+            ivCategoryType.setImageDrawable(itemView.getContext().getResources().getDrawable(R.drawable.weather));
+        }
+
     }
 
 

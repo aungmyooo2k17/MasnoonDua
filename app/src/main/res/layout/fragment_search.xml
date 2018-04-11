@@ -1,13 +1,28 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.mmucsy.masnoondua.fragments.SearchFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <EditText
+        android:id="@+id/edit_text_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@drawable/search_box_design"
+        android:drawableRight="@drawable/ic_search"
+        android:elevation="8dp"
+        android:hint="Search Dua"
+        android:maxLines="1"
+        android:padding="@dimen/margin_medium" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_search_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/text_search" />
+        android:layout_margin="@dimen/margin_medium"
+        android:layout_below="@id/edit_text_search"/>
 
-</FrameLayout>
+
+</RelativeLayout>

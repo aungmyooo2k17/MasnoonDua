@@ -36,6 +36,7 @@
         <activity
             android:name="com.mmucsy.masnoondua.activities.DuaListActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.mmucsy.masnoondua.activities.AboutActivity" />
 
         <meta-data
             android:name="android.support.VERSION"

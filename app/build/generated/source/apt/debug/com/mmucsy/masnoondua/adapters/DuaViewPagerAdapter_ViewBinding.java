@@ -4,7 +4,6 @@ package com.mmucsy.masnoondua.adapters;
 import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
@@ -22,7 +21,6 @@ public class DuaViewPagerAdapter_ViewBinding implements Unbinder {
     target.tvDuaTitle = Utils.findRequiredViewAsType(source, R.id.tv_dua_tilte, "field 'tvDuaTitle'", TextView.class);
     target.tvDua = Utils.findRequiredViewAsType(source, R.id.tv_dua, "field 'tvDua'", TextView.class);
     target.tvDuaTranslation = Utils.findRequiredViewAsType(source, R.id.tv_dua_translation, "field 'tvDuaTranslation'", TextView.class);
-    target.rlShareView = Utils.findRequiredViewAsType(source, R.id.share_view, "field 'rlShareView'", RelativeLayout.class);
   }
 
   @Override
@@ -35,6 +33,5 @@ public class DuaViewPagerAdapter_ViewBinding implements Unbinder {
     target.tvDuaTitle = null;
     target.tvDua = null;
     target.tvDuaTranslation = null;
-    target.rlShareView = null;
   }
 }

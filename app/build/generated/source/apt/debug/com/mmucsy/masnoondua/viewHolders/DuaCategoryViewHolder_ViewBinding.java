@@ -4,12 +4,13 @@ package com.mmucsy.masnoondua.viewHolders;
 import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
 import com.mmucsy.masnoondua.R;
 import java.lang.IllegalStateException;
 import java.lang.Override;
-import net.aungpyaephyo.mmtextview.components.MMTextView;
 
 public class DuaCategoryViewHolder_ViewBinding implements Unbinder {
   private DuaCategoryViewHolder target;
@@ -18,7 +19,8 @@ public class DuaCategoryViewHolder_ViewBinding implements Unbinder {
   public DuaCategoryViewHolder_ViewBinding(DuaCategoryViewHolder target, View source) {
     this.target = target;
 
-    target.tvCategory = Utils.findRequiredViewAsType(source, R.id.tv_category, "field 'tvCategory'", MMTextView.class);
+    target.tvCategory = Utils.findRequiredViewAsType(source, R.id.tv_category, "field 'tvCategory'", TextView.class);
+    target.ivCategoryType = Utils.findRequiredViewAsType(source, R.id.iv_category_type, "field 'ivCategoryType'", ImageView.class);
   }
 
   @Override
@@ -29,5 +31,6 @@ public class DuaCategoryViewHolder_ViewBinding implements Unbinder {
     this.target = null;
 
     target.tvCategory = null;
+    target.ivCategoryType = null;
   }
 }

@@ -4,12 +4,12 @@ package com.mmucsy.masnoondua.viewHolders;
 import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
+import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
 import com.mmucsy.masnoondua.R;
 import java.lang.IllegalStateException;
 import java.lang.Override;
-import net.aungpyaephyo.mmtextview.components.MMTextView;
 
 public class DuaViewHolder_ViewBinding implements Unbinder {
   private DuaViewHolder target;
@@ -18,7 +18,7 @@ public class DuaViewHolder_ViewBinding implements Unbinder {
   public DuaViewHolder_ViewBinding(DuaViewHolder target, View source) {
     this.target = target;
 
-    target.tvDuaTitle = Utils.findRequiredViewAsType(source, R.id.tv_dua_title, "field 'tvDuaTitle'", MMTextView.class);
+    target.tvDuaTitle = Utils.findRequiredViewAsType(source, R.id.tv_dua_title, "field 'tvDuaTitle'", TextView.class);
   }
 
   @Override

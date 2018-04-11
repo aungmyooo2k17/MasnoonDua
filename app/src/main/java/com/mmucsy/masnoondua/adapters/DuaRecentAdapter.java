@@ -29,8 +29,9 @@ public class DuaRecentAdapter extends RecyclerView.Adapter<DuaRecentViewHolder> 
         mLayoutInflator = LayoutInflater.from(context);
         this.duaRecentItemDelegate = duaRecentItemDelegate;
         this.duaList = duaList;
+    }
 
-
+    public DuaRecentAdapter() {
     }
 
     @Override

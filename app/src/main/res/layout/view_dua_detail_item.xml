@@ -14,7 +14,7 @@
         android:background="@drawable/dua_item_background"
         android:elevation="8dp">
 
-            <net.aungpyaephyo.mmtextview.components.MMTextView
+            <TextView
                 android:id="@+id/tv_dua_tilte"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
                 android:textColor="@color/text_icon_color"
                 android:textSize="@dimen/text_regular_3x" />
 
-            <net.aungpyaephyo.mmtextview.components.MMTextView
+            <TextView
                 android:id="@+id/tv_dua_translation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

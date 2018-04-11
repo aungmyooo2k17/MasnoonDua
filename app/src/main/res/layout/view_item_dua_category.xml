@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="150dp">
+    android:layout_height="150dp"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
+        android:id="@+id/iv_category_type"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/bathroom"
+        tools:src="@drawable/bathroom"
         android:scaleType="centerCrop"/>
 
     <TextView
@@ -15,14 +16,12 @@
         android:layout_height="150dp"
         android:background="@color/light_dark"/>
 
-    <net.aungpyaephyo.mmtextview.components.MMTextView
+    <TextView
         android:id="@+id/tv_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:textColor="@color/white"
-        android:letterSpacing="0.4"
-        android:textAllCaps="true"
         android:textStyle="bold"
         android:textSize="@dimen/text_regular_3x" />
 

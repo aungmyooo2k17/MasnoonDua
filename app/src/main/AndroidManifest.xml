@@ -3,8 +3,7 @@
     package="com.mmucsy.masnoondua">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"  />
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MasnoonDuaApp"
@@ -28,7 +27,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.DuaListActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.AboutActivity"></activity>
     </application>
 
 </manifest>

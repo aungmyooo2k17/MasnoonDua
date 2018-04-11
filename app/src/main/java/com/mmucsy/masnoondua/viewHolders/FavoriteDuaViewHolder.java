@@ -3,7 +3,9 @@ package com.mmucsy.masnoondua.viewHolders;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
+import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.data.models.Dua;
 import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
@@ -22,9 +24,9 @@ import butterknife.ButterKnife;
 public class FavoriteDuaViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
     @BindView(R.id.fav_dua_title)
-    MMTextView favDuaTitle;
-    @BindView(R.id.btn_remove)
-    Button btnRemove;
+    TextView favDuaTitle;
+
+
     private DuaItemDelegate duaItemDelegate;
     private List<Dua> duaTitleListByCategoryId;
     private int pos;
@@ -35,7 +37,7 @@ public class FavoriteDuaViewHolder extends RecyclerView.ViewHolder implements Vi
         ButterKnife.bind(this, itemView);
         this.duaItemDelegate = duaItemDelegate;
         this.duaTitleListByCategoryId = duaTitleListByCategoryId;
-        btnRemove.setOnClickListener(this);
+        itemView.setOnClickListener(this);
 
     }
 
@@ -48,6 +50,7 @@ public class FavoriteDuaViewHolder extends RecyclerView.ViewHolder implements Vi
 
     public void bind(int position) {
         pos = position;
+        favDuaTitle.setTypeface(MasnoonDuaApp.typeface);
         favDuaTitle.setText(duaTitleListByCategoryId.get(pos).getDuaTitle());
     }
 }

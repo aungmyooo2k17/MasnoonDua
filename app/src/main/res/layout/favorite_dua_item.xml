@@ -5,7 +5,7 @@
     android:background="@drawable/dua_list_back">
 
 
-    <net.aungpyaephyo.mmtextview.components.MMTextView
+    <TextView
         android:id="@+id/fav_dua_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,12 +14,6 @@
         android:textColor="@color/text_icon_color"
         android:textSize="@dimen/text_small" />
 
-    <Button
-        android:id="@+id/btn_remove"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/fav_dua_title"
-        android:text="Remove"/>
 
 
 </RelativeLayout>

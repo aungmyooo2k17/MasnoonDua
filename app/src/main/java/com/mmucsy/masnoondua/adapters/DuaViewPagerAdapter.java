@@ -4,7 +4,6 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -12,23 +11,19 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.view.PagerAdapter;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mmucsy.masnoondua.FavSharedPreference;
 import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
-import com.mmucsy.masnoondua.SharedPreference;
-import com.mmucsy.masnoondua.data.db.DatabaseAccess;
 import com.mmucsy.masnoondua.data.models.Dua;
 
 import java.io.ByteArrayOutputStream;
-import java.util.Arrays;
 import java.util.List;
 
 import butterknife.BindView;
@@ -49,10 +44,7 @@ public class DuaViewPagerAdapter extends PagerAdapter {
     @BindView(R.id.tv_dua_translation)
     TextView tvDuaTranslation;
 
-    @BindView(R.id.share_view)
-    RelativeLayout rlShareView;
-
-    private static View viewShare;
+    private View viewShare;
     private Context context;
     private LayoutInflater mLayoutInflater;
     private List<Dua> duaList;
@@ -82,7 +74,8 @@ public class DuaViewPagerAdapter extends PagerAdapter {
 
         pos = position;
 
-        viewShare = rlShareView.getRootView();
+        tvDuaTitle.setTypeface(MasnoonDuaApp.typeface);
+        tvDuaTranslation.setTypeface(MasnoonDuaApp.typeface);
 
         tvDuaTitle.setText(duaList.get(position).getDuaTitle());
         tvDua.setText(duaList.get(position).getDuaArbic());
@@ -90,6 +83,8 @@ public class DuaViewPagerAdapter extends PagerAdapter {
 
 
         container.addView(view);
+
+        view.setTag("View"+position);
         return view;
     }
 
@@ -118,7 +113,9 @@ public class DuaViewPagerAdapter extends PagerAdapter {
         return returnedBitmap;
     }
 
-    public void ShareImage(){
+    public void ShareImage(View v){
+        RelativeLayout rlShareView =(RelativeLayout) v.findViewById(R.id.share_view);
+        viewShare = rlShareView.getRootView();
         Bitmap bitmap = getBitmapFromView(viewShare);
         final Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("image/jpg");
@@ -135,64 +132,23 @@ public class DuaViewPagerAdapter extends PagerAdapter {
     }
 
 
-    public void copyArbicText(){
+    public void copyArbicText(int currentPos){
         ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
-        ClipData clip = ClipData.newPlainText("arbic", tvDua.getText());
+        ClipData clip = ClipData.newPlainText("arbic", duaList.get(currentPos).getDuaArbic());
+        Toast.makeText(context, "Copy to Clipboard"+duaList.get(currentPos).getDuaArbic(), Toast.LENGTH_LONG).show();
         clipboard.setPrimaryClip(clip);
     }
 
-    public void addFavToThis(){
-        SharedPreference s=new SharedPreference();
-        s.addFavorite(context,duaList.get(pos));
-//        boolean t = true;
-//        String[] favArr = loadArray("FAV_ARR", context);
-//
-//        List<String> favList = Arrays.asList(favArr);
-//        if(!t) {
-//
-//
-//            if (favArr.length != 0) {
-//
-//            }
-//        }else{
-//
-//            favList.add(duaList.get(pos).getDua_id()+"");
-//            saveArray(favList, "FAV_ARR", context);
-//
-//        }
-//
-//        for (String e : favList) {
-//            Log.d(MasnoonDuaApp.TAG, "addFavToThis: "+e);
-//        }
+    public void addFavToThis(int currentPos){
+        FavSharedPreference s=new FavSharedPreference();
+        s.addFavorite(context,duaList.get(currentPos));
 
     }
-    public void removeFavFromThat()
+    public void removeFavFromThat(int currentPos)
     {
-        SharedPreference shrd=new SharedPreference();
-        shrd.removeFavorite(context,pos);
+        FavSharedPreference shrd=new FavSharedPreference();
+        shrd.removeFavorite(context,currentPos);
     }
-
-
-//    private String[] loadArray(String arrayName, Context mContext) {
-//        SharedPreferences prefs = mContext.getSharedPreferences("GROUP", 0);
-//        int size = prefs.getInt(arrayName + "_size", 0);
-////        String array[] = new String[size];
-//        String[] arr = new String[size];
-//        for (int i = 0; i < size; i++) {
-//            arr[i] = prefs.getString(arrayName + "_" + i, null);
-//        }
-//        return arr;
-//    }
-//
-//    private boolean saveArray(List<String> array, String arrayName, Context mContext) {
-//        SharedPreferences prefs = mContext.getSharedPreferences("GROUP", 0);
-//        SharedPreferences.Editor editor = prefs.edit();
-//        editor.putInt(arrayName +"_size", array.size());
-//        for(int i=0;i<array.size();i++) {
-//            editor.putString(arrayName + "_" + i, array.get(i));
-//        }
-//        return editor.commit();
-//    }
 
 
 

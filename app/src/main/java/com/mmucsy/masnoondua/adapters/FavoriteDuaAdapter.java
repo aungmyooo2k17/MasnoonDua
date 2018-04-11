@@ -1,18 +1,15 @@
 package com.mmucsy.masnoondua.adapters;
 
 import android.content.Context;
-import android.graphics.Shader;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.mmucsy.masnoondua.FavSharedPreference;
 import com.mmucsy.masnoondua.R;
-import com.mmucsy.masnoondua.SharedPreference;
 import com.mmucsy.masnoondua.data.models.Dua;
 import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
-import com.mmucsy.masnoondua.viewHolders.DuaViewHolder;
 import com.mmucsy.masnoondua.viewHolders.FavoriteDuaViewHolder;
 
 import java.util.List;
@@ -26,7 +23,7 @@ public class FavoriteDuaAdapter extends RecyclerView.Adapter<FavoriteDuaViewHold
     private LayoutInflater mLayoutInflator;
     private DuaItemDelegate duaItemDelegate;
     private List<Dua> favDuaList;
-    SharedPreference s = new SharedPreference();
+    FavSharedPreference s = new FavSharedPreference();
 
     public FavoriteDuaAdapter(Context context, DuaItemDelegate duaItemDelegate, List<Dua> duaTitleListByCategoryId) {
         mLayoutInflator = LayoutInflater.from(context);

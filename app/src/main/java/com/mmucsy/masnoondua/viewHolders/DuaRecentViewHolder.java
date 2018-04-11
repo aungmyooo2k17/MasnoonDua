@@ -2,8 +2,11 @@ package com.mmucsy.masnoondua.viewHolders;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.data.models.Dua;
 import com.mmucsy.masnoondua.delegates.DuaRecentItemDelegate;
@@ -28,10 +31,13 @@ public class DuaRecentViewHolder extends RecyclerView.ViewHolder {
     private List<Dua> duaList;
 
     @BindView(R.id.tv_dua_title)
-    MMTextView tvDuaTitle;
+    TextView tvDuaTitle;
 
     @BindView(R.id.tv_dua)
     TextView tvDuaArbic;
+
+    @BindView(R.id.iv_dua_recent)
+    ImageView ivDuaRecent;
 
 
     public DuaRecentViewHolder(View itemView, DuaRecentItemDelegate duaRecentItemDelegate, List<Dua> duaList) {
@@ -40,15 +46,28 @@ public class DuaRecentViewHolder extends RecyclerView.ViewHolder {
         ButterKnife.bind(this, itemView);
 
         this.duaRecentItemDelegate = duaRecentItemDelegate;
-//        this.duaTitleList = duaTitleList;
-//        this.duaArbicList = duaArbicList;
         this.duaList = duaList;
 
     }
 
     public void bind(int position) {
+        tvDuaTitle.setTypeface(MasnoonDuaApp.typeface);
         tvDuaTitle.setText(duaList.get(position).getDuaTitle());
         tvDuaArbic.setText(duaList.get(position).getDuaArbic());
+        int i = duaList.get(position).getCategory_id();
+        if (i == 1) {
+            Glide.with(itemView.getContext()).load(itemView.getContext().getResources().getDrawable(R.drawable.social)).into(ivDuaRecent);
+        } else if (i == 2) {
+            Glide.with(itemView.getContext()).load(itemView.getContext().getResources().getDrawable(R.drawable.trip)).into(ivDuaRecent);
+        } else if (i == 3) {
+            Glide.with(itemView.getContext()).load(itemView.getContext().getResources().getDrawable(R.drawable.namaz)).into(ivDuaRecent);
+        } else if (i == 4) {
+            Glide.with(itemView.getContext()).load(itemView.getContext().getResources().getDrawable(R.drawable.food)).into(ivDuaRecent);
+        } else if (i == 5) {
+            Glide.with(itemView.getContext()).load(itemView.getContext().getResources().getDrawable(R.drawable.daily)).into(ivDuaRecent);
+        } else if (i == 6) {
+            Glide.with(itemView.getContext()).load(itemView.getContext().getResources().getDrawable(R.drawable.weather)).into(ivDuaRecent);
+        }
     }
 
 

@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 
 import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
+import com.mmucsy.masnoondua.RecentSharedPreference;
 import com.mmucsy.masnoondua.adapters.DuaAdapter;
+import com.mmucsy.masnoondua.adapters.DuaRecentAdapter;
 import com.mmucsy.masnoondua.data.db.DatabaseAccess;
 import com.mmucsy.masnoondua.data.models.Dua;
 import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
@@ -29,6 +32,7 @@ public class DuaListActivity extends AppCompatActivity implements DuaItemDelegat
 
     private DuaAdapter duaAdapter;
     private int duaCategoryPos;
+    private RecentSharedPreference recentSharedPreference = new RecentSharedPreference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +60,11 @@ public class DuaListActivity extends AppCompatActivity implements DuaItemDelegat
     }
 
     @Override
-    public void onTapDua(int position, int itemPosition) {
+    public void onTapDua(int duaId, int itemPosition) {
+        Log.d(MasnoonDuaApp.TAG, "onTapDua: "+duaId);
+        recentSharedPreference.addRecent(this, duaId);
+        DuaRecentAdapter duaRecentAdapter = new DuaRecentAdapter();
+        duaRecentAdapter.notifyDataSetChanged();
         Intent i = new Intent(DuaListActivity.this, DuaDetailActivity.class);
         i.putExtra("ONTAP_POS", itemPosition);
         i.putExtra("DUA_CATEGORY", duaCategoryPos);

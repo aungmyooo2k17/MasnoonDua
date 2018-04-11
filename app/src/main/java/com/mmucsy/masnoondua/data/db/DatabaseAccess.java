@@ -1,23 +1,18 @@
 package com.mmucsy.masnoondua.data.db;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.google.gson.Gson;
 import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.data.models.Category;
 import com.mmucsy.masnoondua.data.models.Dua;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
-
-import static com.mmucsy.masnoondua.SharedPreference.FAVORITES;
-import static com.mmucsy.masnoondua.SharedPreference.PREFS_NAME;
 
 /**
  * Created by aungmyooo on 4/6/18.
@@ -110,7 +105,7 @@ public class DatabaseAccess {
         return list;
     }
 
-    public List<Dua> getRecent() {
+    public List<Dua> getAllDua() {
 
         List<Dua> list = new ArrayList<>();
         Cursor cursor = database.rawQuery("SELECT * FROM dua", null);
@@ -151,6 +146,38 @@ public class DatabaseAccess {
         return list;
     }
 
+    public List<Dua> getDuaById(List<Integer> duId){
+        List<Dua> duaList = new ArrayList<>();
+        if(duId != null) {
+            HashSet<Integer> hashSet = new HashSet<Integer>();
+            hashSet.addAll(duId);
+            duId.clear();
+            duId.addAll(hashSet);
+        }
+
+        if(duId != null) {
+            for (int i : duId) {
+                Cursor cursor = database.rawQuery("SELECT * FROM dua WHERE dua_id = " + i, null);
+                cursor.moveToFirst();
+                while (!cursor.isAfterLast()) {
+                    Dua dua = new Dua();
+                    dua.setDua_id(cursor.getInt(0));
+                    dua.setDuaTitle(cursor.getString(1));
+                    dua.setDuaArbic(cursor.getString(2));
+                    dua.setDuaDescription(cursor.getString(3));
+                    dua.setCategory_id(cursor.getInt(4));
+                    duaList.add(dua);
+
+                    cursor.moveToNext();
+                }
+                cursor.close();
+            }
+        }
+
+        return duaList;
+
+    }
+
     public List<Dua> getDuaByPosition(int duaId) {
 
         List<Dua> list = new ArrayList<>();
@@ -169,6 +196,28 @@ public class DatabaseAccess {
         }
         cursor.close();
         return list;
+    }
+
+    public List<Dua> getDuaByDuaTitle(String duaPosition) {
+
+        List<Dua> list = new ArrayList<>();
+        Log.d(MasnoonDuaApp.TAG, "getDuaByDuaTitle: "+duaPosition);
+        Cursor cursor = database.rawQuery("SELECT * FROM dua WHERE dua_title = "+duaPosition, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Dua dua = new Dua();
+            dua.setDua_id(cursor.getInt(0));
+            dua.setDuaTitle(cursor.getString(1));
+            dua.setDuaArbic(cursor.getString(2));
+            dua.setDuaDescription(cursor.getString(3));
+            dua.setCategory_id(cursor.getInt(4));
+            list.add(dua);
+
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return list;
+
     }
 //    public ArrayList<Dua> getFavorites(Context context) {
 //        SharedPreferences settings;

@@ -4,6 +4,7 @@
     android:layout_height="150dp">
 
     <ImageView
+        android:id="@+id/iv_dua_recent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
@@ -20,7 +21,7 @@
         android:layout_centerInParent="true"
         android:orientation="vertical">
 
-        <net.aungpyaephyo.mmtextview.components.MMTextView
+        <TextView
             android:id="@+id/tv_dua_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -69,6 +69,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 fragment = new SearchFragment();
                 loadFragment(fragment);
                 return true;
+            case R.id.action_about:
+                Intent i = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(i);
         }
         return false;
     }
