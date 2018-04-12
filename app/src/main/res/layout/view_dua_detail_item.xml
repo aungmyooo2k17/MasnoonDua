@@ -5,7 +5,7 @@
 
 
     <RelativeLayout
-        android:id="@+id/share_view"
+        android:id="@+id/share_view_s"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/appbar_layout"
@@ -15,7 +15,7 @@
         android:elevation="8dp">
 
             <TextView
-                android:id="@+id/tv_dua_tilte"
+                android:id="@+id/tv_dua_tilte_s"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -28,10 +28,10 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tv_dua"
+                android:id="@+id/tv_dua_s"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_dua_tilte"
+                android:layout_below="@id/tv_dua_tilte_s"
                 android:gravity="center_horizontal"
                 android:paddingLeft="@dimen/margin_medium_2"
                 android:paddingRight="@dimen/margin_medium_2"
@@ -41,10 +41,10 @@
                 android:textSize="@dimen/text_regular_3x" />
 
             <TextView
-                android:id="@+id/tv_dua_translation"
+                android:id="@+id/tv_dua_translation_s"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_dua"
+                android:layout_below="@id/tv_dua_s"
                 android:paddingBottom="@dimen/margin_medium_2"
                 android:paddingLeft="@dimen/margin_medium_2"
                 android:paddingRight="@dimen/margin_medium_2"

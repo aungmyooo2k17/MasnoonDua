@@ -5,5 +5,5 @@ package com.mmucsy.masnoondua.delegates;
  */
 
 public interface SearchItemDelegate {
-    void onTapDua(String s);
+    void onTapDua(int s);
 }

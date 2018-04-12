@@ -16,6 +16,7 @@ import android.widget.EditText;
 import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.activities.DuaDetailActivity;
+import com.mmucsy.masnoondua.activities.DuaSearchDetailActivity;
 import com.mmucsy.masnoondua.adapters.FavoriteDuaAdapter;
 import com.mmucsy.masnoondua.adapters.SearchAdapter;
 import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
@@ -49,7 +50,7 @@ public class SearchFragment extends Fragment implements SearchItemDelegate{
         View v = inflater.inflate(R.layout.fragment_search, container, false);
         ButterKnife.bind(this, v);
 
-        duaAdapter = new SearchAdapter(getContext(), this, MasnoonDuaApp.duaTitleList);
+        duaAdapter = new SearchAdapter(getContext(), this, MasnoonDuaApp.duaTitleList, MasnoonDuaApp.duIdList);
         rvSearch.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         rvSearch.setAdapter(duaAdapter);
 
@@ -75,10 +76,9 @@ public class SearchFragment extends Fragment implements SearchItemDelegate{
     }
 
     @Override
-    public void onTapDua(String s) {
-        Intent i = new Intent(getContext(), DuaDetailActivity.class);
-        i.putExtra("ONTAP_POS", s);
-        i.putExtra("DUA_CATEGORY", 000);
+    public void onTapDua(int duaId) {
+        Intent i = new Intent(getContext(), DuaSearchDetailActivity.class);
+        i.putExtra("DUA_ID", duaId);
         getContext().startActivity(i);
     }
 }

@@ -20,7 +20,7 @@ public class DuaRecentViewHolder_ViewBinding implements Unbinder {
     this.target = target;
 
     target.tvDuaTitle = Utils.findRequiredViewAsType(source, R.id.tv_dua_title, "field 'tvDuaTitle'", TextView.class);
-    target.tvDuaArbic = Utils.findRequiredViewAsType(source, R.id.tv_dua, "field 'tvDuaArbic'", TextView.class);
+    target.tvDuaArbic = Utils.findRequiredViewAsType(source, R.id.tv_dua_s, "field 'tvDuaArbic'", TextView.class);
     target.ivDuaRecent = Utils.findRequiredViewAsType(source, R.id.iv_dua_recent, "field 'ivDuaRecent'", ImageView.class);
   }
 

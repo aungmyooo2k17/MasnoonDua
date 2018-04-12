@@ -26,6 +26,7 @@ public class MasnoonDuaApp extends Application {
     public static List<Dua> duaAllList;
     public static List<Integer> duasId = new ArrayList<Integer>();
     public static List<Dua> duaById;
+    public static List<Integer> duIdList;
 
     public static DatabaseAccess databaseAccess;
     public static FavSharedPreference favSharedPreference;
@@ -42,6 +43,7 @@ public class MasnoonDuaApp extends Application {
         duaTitleList = databaseAccess.getDuaTitle();
         duaArbicList = databaseAccess.getDuaArbic();
         duaAllList = databaseAccess.getAllDua();
+        duIdList = databaseAccess.getDuaId();
         duaById = databaseAccess.getDuaById(recentSharedPreference.getRecent(this));
         duaList = favSharedPreference.getFavorites(this);
         databaseAccess.close();

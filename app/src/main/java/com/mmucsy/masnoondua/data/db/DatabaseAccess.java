@@ -93,6 +93,37 @@ public class DatabaseAccess {
         return list;
     }
 
+    public List<Integer> getDuaId() {
+        List<Integer> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT dua_id FROM dua", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(cursor.getInt(0));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return list;
+    }
+
+    public List<Dua> getDuaObj(int i) {
+        List<Dua> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT dua_id FROM dua WHERE dua_id = "+i, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Dua dua = new Dua();
+            dua.setDua_id(cursor.getInt(0));
+            dua.setDuaTitle(cursor.getString(1));
+            dua.setDuaArbic(cursor.getString(2));
+            dua.setDuaDescription(cursor.getString(3));
+            dua.setCategory_id(cursor.getInt(4));
+            list.add(dua);
+
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return list;
+    }
+
     public List<String> getDuaArbic() {
         List<String> list = new ArrayList<>();
         Cursor cursor = database.rawQuery("SELECT dua_arbic FROM dua", null);
@@ -198,11 +229,11 @@ public class DatabaseAccess {
         return list;
     }
 
-    public List<Dua> getDuaByDuaTitle(String duaPosition) {
+    public List<Dua> getDuaByDuaTitle(int duaId) {
 
         List<Dua> list = new ArrayList<>();
-        Log.d(MasnoonDuaApp.TAG, "getDuaByDuaTitle: "+duaPosition);
-        Cursor cursor = database.rawQuery("SELECT * FROM dua WHERE dua_title = "+duaPosition, null);
+        Log.d(MasnoonDuaApp.TAG, "getDuaByDuaTitle: "+duaId);
+        Cursor cursor = database.rawQuery("SELECT * FROM dua WHERE dua_id = "+duaId, null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             Dua dua = new Dua();

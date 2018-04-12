@@ -1,5 +1,8 @@
 package com.mmucsy.masnoondua.activities;
 
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
@@ -68,11 +71,11 @@ public class DuaDetailActivity extends AppCompatActivity implements BottomNaviga
             duaList = favSharedPreference.getFavorites(this);
 
         } else if (duaCategory == 000) {
-            Log.d(MasnoonDuaApp.TAG, "onCreate:is equal 000 " + duaCategory);
-            databaseAccess = DatabaseAccess.getInstance(this);
-            databaseAccess.open();
-            duaList = databaseAccess.getDuaByDuaTitle(duaPosition);
-            databaseAccess.close();
+//            Log.d(MasnoonDuaApp.TAG, "onCreate:is equal 000 " + duaCategory);
+//            databaseAccess = DatabaseAccess.getInstance(this);
+//            databaseAccess.open();
+//            duaList = databaseAccess.getDuaObj(Integer.parseInt(duaPosition));
+//            databaseAccess.close();
 
         } else {
             databaseAccess = DatabaseAccess.getInstance(this);
@@ -134,7 +137,7 @@ public class DuaDetailActivity extends AppCompatActivity implements BottomNaviga
         super.onStart();
         currentPos = viewPagerDua.getCurrentItem();
         if (checkFavoriteItem(duaList.get(currentPos))) {
-            bottomNavigationView.getMenu().findItem(R.id.action_favourite_dua).setIcon(android.R.drawable.star_big_off);
+            bottomNavigationView.getMenu().findItem(R.id.action_favourite_dua).setIcon(R.drawable.favorite_on);
 
         }
     }
@@ -150,16 +153,17 @@ public class DuaDetailActivity extends AppCompatActivity implements BottomNaviga
 
                 if (checkFavoriteItem(duaList.get(currentPos))) {
 //                    Log.i("Position...", currentPos + "soe");
-                    duaViewPagerAdapter.removeFavFromThat(duaList.get(viewPagerDua.getCurrentItem()),this);
-
+//                    duaViewPagerAdapter.removeFavFromThat(duaList.get(viewPagerDua.getCurrentItem()),this);
+                    favSharedPreference.removeFavorite(this, duaList.get(currentPos));
+                    Log.d(MasnoonDuaApp.TAG, "onNavigationItemSelected: "+duaList.get(currentPos).getDuaTitle()+duaList.get(currentPos).getDua_id());
                     Toast.makeText(getApplicationContext(), "Item Removed", Toast.LENGTH_SHORT).show();
-                    item.setIcon(R.drawable.ic_favorite);
+                    item.setIcon(R.drawable.favorite_off);
                 } else {
 //                    Log.i("Position...", currentPos + "so");
                     duaViewPagerAdapter.addFavToThis(currentPos);
                     Toast.makeText(getApplicationContext(), "Added Favorite", Toast.LENGTH_SHORT).show();
 
-                    item.setIcon(android.R.drawable.star_big_off);
+                    item.setIcon(R.drawable.favorite_on);
                 }
                 return true;
             case R.id.action_share_dua:
@@ -186,10 +190,10 @@ public class DuaDetailActivity extends AppCompatActivity implements BottomNaviga
 //        Log.i("Position", p + "dua");
         if (checkFavoriteItem(duaList.get(p))) {
             Toast.makeText(getApplicationContext(), "have fav", Toast.LENGTH_SHORT).show();
-            bottomNavigationView.getMenu().findItem(R.id.action_favourite_dua).setIcon(android.R.drawable.star_big_off);
+            bottomNavigationView.getMenu().findItem(R.id.action_favourite_dua).setIcon(R.drawable.favorite_on);
         } else if (!checkFavoriteItem(duaList.get(p))) {
             Toast.makeText(getApplicationContext(), "not have fav", Toast.LENGTH_SHORT).show();
-            bottomNavigationView.getMenu().findItem(R.id.action_favourite_dua).setIcon(R.drawable.ic_favorite);
+            bottomNavigationView.getMenu().findItem(R.id.action_favourite_dua).setIcon(R.drawable.favorite_off);
 
         }
     }

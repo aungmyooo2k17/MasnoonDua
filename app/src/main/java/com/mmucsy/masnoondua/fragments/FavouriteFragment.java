@@ -59,10 +59,11 @@ public class FavouriteFragment extends Fragment implements DuaItemDelegate {
 
         tvNoFav.setTypeface(MasnoonDuaApp.typeface);
 
+
+
         duaAdapter = new FavoriteDuaAdapter(getContext(), this, favSharedPreference.getFavorites(getActivity()));
         recyclerViewFavourite.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         recyclerViewFavourite.setAdapter(duaAdapter);
-
         if (favSharedPreference.getFavorites(getContext()) == null) {
             recyclerViewFavourite.setVisibility(View.INVISIBLE);
             rlNotHaveFav.setVisibility(View.VISIBLE);
@@ -77,14 +78,16 @@ public class FavouriteFragment extends Fragment implements DuaItemDelegate {
         return v;
     }
 
+
     public void removeItemFromList(Dua dua, Context context)
     {
-        Log.i("fggerger",FavoriteDuaAdapter.favDuaList.size()+"");
+//        Log.i("fggerger",FavoriteDuaAdapter.favDuaList.size()+"");
 
 //        FavoriteDuaAdapter.favDuaList.remove(dua);
 //        duaAdapter.notifyDataSetChanged();
-        duaAdapter.removee(context,dua);
+//        duaAdapter.removee(context,dua);
     }
+
 
 
     @Override
@@ -125,4 +128,22 @@ public class FavouriteFragment extends Fragment implements DuaItemDelegate {
 //            return;
 //        }
 //    }
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        duaAdapter = new FavoriteDuaAdapter(getContext(), this, favSharedPreference.getFavorites(getActivity()));
+        Log.d(MasnoonDuaApp.TAG, "onCreateView: "+favSharedPreference.getFavorites(getContext()).size());
+        recyclerViewFavourite.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+        recyclerViewFavourite.setAdapter(duaAdapter);
+        if (favSharedPreference.getFavorites(getContext()).size() == 0) {
+            recyclerViewFavourite.setVisibility(View.INVISIBLE);
+            rlNotHaveFav.setVisibility(View.VISIBLE);
+        } else {
+            recyclerViewFavourite.setVisibility(View.VISIBLE);
+            rlNotHaveFav.setVisibility(View.INVISIBLE);
+        }
+
+    }
 }

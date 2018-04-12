@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/action_favourite_dua"
-        android:icon="@drawable/ic_favorite"
+        android:icon="@drawable/favorite_off"
         android:title="@string/text_favorites" />
     <item
         android:id="@+id/action_copy_dua"

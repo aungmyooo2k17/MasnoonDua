@@ -30,10 +30,11 @@ public class SearchViewHolder extends RecyclerView.ViewHolder implements View.On
 
     private SearchItemDelegate searchItemDelegate;
     private List<String> duaTitleListByCategoryId;
+    private List<Integer> duaIdList;
     private int pos;
 
 
-    public SearchViewHolder(View itemView, SearchItemDelegate searchItemDelegate, List<String> duaTitleListByCategoryId) {
+    public SearchViewHolder(View itemView, SearchItemDelegate searchItemDelegate, List<String> duaTitleListByCategoryId, List<Integer> duaIdList) {
         super(itemView);
         ButterKnife.bind(this, itemView);
 
@@ -41,13 +42,14 @@ public class SearchViewHolder extends RecyclerView.ViewHolder implements View.On
 
         this.searchItemDelegate = searchItemDelegate;
         this.duaTitleListByCategoryId = duaTitleListByCategoryId;
+        this.duaIdList = duaIdList;
         itemView.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view) {
-        searchItemDelegate.onTapDua(duaTitleListByCategoryId.get(pos));
+        searchItemDelegate.onTapDua(duaIdList.get(pos));
         Log.d(MasnoonDuaApp.TAG, "onClick: "+duaTitleListByCategoryId.get(pos));
 
     }

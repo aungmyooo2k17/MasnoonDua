@@ -27,15 +27,16 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder> implem
     private SearchItemDelegate searchItemDelegate;
     private List<String> duaList;
     private List<String> filteredData;
+    private List<Integer> duaIdList;
     private FavSharedPreference s = new FavSharedPreference();
     private ItemFilter mFilter = new ItemFilter();
 
-    public SearchAdapter(Context context, SearchItemDelegate searchItemDelegate, List<String> duaList) {
+    public SearchAdapter(Context context, SearchItemDelegate searchItemDelegate, List<String> duaList, List<Integer> duaIdList) {
         mLayoutInflator = LayoutInflater.from(context);
         this.searchItemDelegate = searchItemDelegate;
         this.duaList = duaList;
+        this.duaIdList = duaIdList;
         this.filteredData = duaList;
-//        this.context=context;
 
     }
 
@@ -43,7 +44,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder> implem
     public SearchViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = mLayoutInflator.inflate(R.layout.favorite_dua_item, parent, false);
 
-        return new SearchViewHolder(v, searchItemDelegate, duaList);
+        return new SearchViewHolder(v, searchItemDelegate, duaList, duaIdList);
     }
 
 

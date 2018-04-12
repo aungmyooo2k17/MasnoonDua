@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mmucsy.masnoondua.activities.DuaSearchDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/share_view_s"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appbar_layout"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin_xlarge"
+            android:background="@drawable/dua_item_background"
+            android:elevation="8dp">
+
+            <TextView
+                android:id="@+id/tv_dua_tilte_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/margin_medium_2"
+                android:paddingRight="@dimen/margin_medium_2"
+                android:paddingTop="@dimen/margin_medium_2"
+                android:text="မုစ်လင်မ်အချင်းချင်း တွေ့ဆုံသောအခါ နှုတ်ခွန်းဆက်သရန်"
+                android:textColor="@color/text_icon_color"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_dua_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_dua_tilte_s"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/margin_medium_2"
+                android:paddingRight="@dimen/margin_medium_2"
+                android:paddingTop="@dimen/margin_medium_2"
+                android:text=" اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُه"
+                android:textColor="@color/text_icon_color"
+                android:textSize="@dimen/text_regular_3x" />
+
+            <TextView
+                android:id="@+id/tv_dua_translation_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_dua_s"
+                android:paddingBottom="@dimen/margin_medium_2"
+                android:paddingLeft="@dimen/margin_medium_2"
+                android:paddingRight="@dimen/margin_medium_2"
+                android:paddingTop="@dimen/margin_medium_2"
+                android:text="အလ္လာဟ်အရှင်မြတ်ထံတော်မှ ချမ်းသာသုခ ကရုဏာတော်နှင့် ဗရကသ် မင်္ဂလာအပေါင်းသည် သင့်တို့အပေါ်သို့ သက်ရောက်ပါစေ။"
+                android:textColor="@color/text_icon_color"
+                android:textSize="@dimen/text_regular" />
+
+        </RelativeLayout>
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_navigation_dua_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:elevation="40dp"
+            app:itemBackground="@color/colorPrimary"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/bottom_navigation_dua_item" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

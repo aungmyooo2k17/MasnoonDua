@@ -48,26 +48,21 @@ public class FavSharedPreference {
 
 
     public void removeFavorite(Context context, Dua dua) {
-        ArrayList<Dua> favorites = getFavorites(context);
-        if (favorites != null) {
+        List<Dua> favList = getFavorites(context);
+        if (favList != null) {
 
-            for (int i = 0; i < favorites.size(); i++) {
-                if (dua.getDua_id()==favorites.get(i).getDua_id()) {
-                    favorites.remove(dua);
+            for (int i = 0; i < favList.size(); i++) {
+                if (dua.getDua_id() == favList.get(i).getDua_id()) {
+                    favList.remove(i);
                     break;
 
                 }
-
             }
-            saveFavorites(context, favorites);
-
-
-
+            saveFavorites(context, favList);
         }
     }
 
     public void addFavorite(Context context, Dua dua) {
-//        Log.i("FavSharedPreference", dua.getDua_id() + "");
 
         List<Dua> favorites = getFavorites(context);
 

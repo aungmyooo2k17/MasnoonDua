@@ -18,9 +18,9 @@ public class DuaViewPagerAdapter_ViewBinding implements Unbinder {
   public DuaViewPagerAdapter_ViewBinding(DuaViewPagerAdapter target, View source) {
     this.target = target;
 
-    target.tvDuaTitle = Utils.findRequiredViewAsType(source, R.id.tv_dua_tilte, "field 'tvDuaTitle'", TextView.class);
-    target.tvDua = Utils.findRequiredViewAsType(source, R.id.tv_dua, "field 'tvDua'", TextView.class);
-    target.tvDuaTranslation = Utils.findRequiredViewAsType(source, R.id.tv_dua_translation, "field 'tvDuaTranslation'", TextView.class);
+    target.tvDuaTitle = Utils.findRequiredViewAsType(source, R.id.tv_dua_tilte_s, "field 'tvDuaTitle'", TextView.class);
+    target.tvDua = Utils.findRequiredViewAsType(source, R.id.tv_dua_s, "field 'tvDua'", TextView.class);
+    target.tvDuaTranslation = Utils.findRequiredViewAsType(source, R.id.tv_dua_translation_s, "field 'tvDuaTranslation'", TextView.class);
   }
 
   @Override

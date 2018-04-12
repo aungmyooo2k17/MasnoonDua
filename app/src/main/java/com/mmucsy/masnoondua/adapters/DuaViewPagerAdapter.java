@@ -1,6 +1,5 @@
 package com.mmucsy.masnoondua.adapters;
 
-import android.app.Fragment;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -12,7 +11,6 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.view.PagerAdapter;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +22,6 @@ import com.mmucsy.masnoondua.FavSharedPreference;
 import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.data.models.Dua;
-import com.mmucsy.masnoondua.fragments.FavouriteFragment;
 
 import java.io.ByteArrayOutputStream;
 import java.util.List;
@@ -38,13 +35,13 @@ import butterknife.ButterKnife;
 
 public class DuaViewPagerAdapter extends PagerAdapter {
 
-    @BindView(R.id.tv_dua_tilte)
+    @BindView(R.id.tv_dua_tilte_s)
     TextView tvDuaTitle;
 
-    @BindView(R.id.tv_dua)
+    @BindView(R.id.tv_dua_s)
     TextView tvDua;
 
-    @BindView(R.id.tv_dua_translation)
+    @BindView(R.id.tv_dua_translation_s)
     TextView tvDuaTranslation;
 
     private View viewShare;
@@ -80,7 +77,6 @@ public class DuaViewPagerAdapter extends PagerAdapter {
 
         tvDuaTitle.setTypeface(MasnoonDuaApp.typeface);
         tvDuaTranslation.setTypeface(MasnoonDuaApp.typeface);
-
         tvDuaTitle.setText(duaList.get(position).getDuaTitle());
         tvDua.setText(duaList.get(position).getDuaArbic());
         tvDuaTranslation.setText(duaList.get(position).getDuaDescription());
@@ -118,7 +114,7 @@ public class DuaViewPagerAdapter extends PagerAdapter {
     }
 
     public void ShareImage(View v) {
-        RelativeLayout rlShareView = (RelativeLayout) v.findViewById(R.id.share_view);
+        RelativeLayout rlShareView = (RelativeLayout) v.findViewById(R.id.share_view_s);
         viewShare = rlShareView.getRootView();
         Bitmap bitmap = getBitmapFromView(viewShare);
         final Intent shareIntent = new Intent(Intent.ACTION_SEND);
@@ -154,8 +150,8 @@ public class DuaViewPagerAdapter extends PagerAdapter {
         FavSharedPreference shrd = new FavSharedPreference();
         shrd.removeFavorite(context, dua);
 
-        FavouriteFragment frag = new FavouriteFragment();
-        frag.removeItemFromList(dua,context);
+//        FavouriteFragment frag = new FavouriteFragment();
+//        frag.removeItemFromList(dua,context);
 
     }
 

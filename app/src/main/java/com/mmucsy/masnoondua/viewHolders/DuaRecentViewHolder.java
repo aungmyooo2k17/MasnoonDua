@@ -11,8 +11,6 @@ import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.data.models.Dua;
 import com.mmucsy.masnoondua.delegates.DuaRecentItemDelegate;
 
-import net.aungpyaephyo.mmtextview.components.MMTextView;
-
 import java.util.List;
 
 import butterknife.BindView;
@@ -33,7 +31,7 @@ public class DuaRecentViewHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.tv_dua_title)
     TextView tvDuaTitle;
 
-    @BindView(R.id.tv_dua)
+    @BindView(R.id.tv_dua_s)
     TextView tvDuaArbic;
 
     @BindView(R.id.iv_dua_recent)
@@ -56,17 +54,17 @@ public class DuaRecentViewHolder extends RecyclerView.ViewHolder {
         tvDuaArbic.setText(duaList.get(position).getDuaArbic());
         int i = duaList.get(position).getCategory_id();
         if (i == 1) {
-            Glide.with(itemView.getContext()).load(itemView.getContext().getResources().getDrawable(R.drawable.social)).into(ivDuaRecent);
-        } else if (i == 2) {
-            Glide.with(itemView.getContext()).load(itemView.getContext().getResources().getDrawable(R.drawable.trip)).into(ivDuaRecent);
-        } else if (i == 3) {
-            Glide.with(itemView.getContext()).load(itemView.getContext().getResources().getDrawable(R.drawable.namaz)).into(ivDuaRecent);
-        } else if (i == 4) {
-            Glide.with(itemView.getContext()).load(itemView.getContext().getResources().getDrawable(R.drawable.food)).into(ivDuaRecent);
-        } else if (i == 5) {
-            Glide.with(itemView.getContext()).load(itemView.getContext().getResources().getDrawable(R.drawable.daily)).into(ivDuaRecent);
-        } else if (i == 6) {
-            Glide.with(itemView.getContext()).load(itemView.getContext().getResources().getDrawable(R.drawable.weather)).into(ivDuaRecent);
+            ivDuaRecent.setImageDrawable(itemView.getContext().getResources().getDrawable(R.drawable.social));
+        }else if(i == 2){
+            ivDuaRecent.setImageDrawable(itemView.getContext().getResources().getDrawable(R.drawable.trip));
+        }else if(i == 3){
+            ivDuaRecent.setImageDrawable(itemView.getContext().getResources().getDrawable(R.drawable.namaz));
+        }else if(i == 4){
+            ivDuaRecent.setImageDrawable(itemView.getContext().getResources().getDrawable(R.drawable.food));
+        }else if(i == 5){
+            ivDuaRecent.setImageDrawable(itemView.getContext().getResources().getDrawable(R.drawable.daily));
+        }else if(i == 6){
+            ivDuaRecent.setImageDrawable(itemView.getContext().getResources().getDrawable(R.drawable.weather));
         }
     }
 

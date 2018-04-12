@@ -31,7 +31,7 @@
             android:textSize="@dimen/text_small" />
 
         <TextView
-            android:id="@+id/tv_dua"
+            android:id="@+id/tv_dua_s"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
