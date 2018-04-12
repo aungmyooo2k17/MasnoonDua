@@ -1,5 +1,6 @@
 package com.mmucsy.masnoondua.adapters;
 
+import android.app.Fragment;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -11,6 +12,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.view.PagerAdapter;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +24,7 @@ import com.mmucsy.masnoondua.FavSharedPreference;
 import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.data.models.Dua;
+import com.mmucsy.masnoondua.fragments.FavouriteFragment;
 
 import java.io.ByteArrayOutputStream;
 import java.util.List;
@@ -49,6 +52,7 @@ public class DuaViewPagerAdapter extends PagerAdapter {
     private LayoutInflater mLayoutInflater;
     private List<Dua> duaList;
     private int pos;
+
 
     public DuaViewPagerAdapter(Context context, List<Dua> duaList) {
         this.context = context;
@@ -84,7 +88,7 @@ public class DuaViewPagerAdapter extends PagerAdapter {
 
         container.addView(view);
 
-        view.setTag("View"+position);
+        view.setTag("View" + position);
         return view;
     }
 
@@ -96,12 +100,12 @@ public class DuaViewPagerAdapter extends PagerAdapter {
     public Bitmap getBitmapFromView(View view) {
 
         //Define a bitmap with the same size as the view
-        Bitmap returnedBitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(),Bitmap.Config.ARGB_8888);
+        Bitmap returnedBitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
         //Bind a canvas to it
         Canvas canvas = new Canvas(returnedBitmap);
         //Get the view's background
-        Drawable bgDrawable =view.getBackground();
-        if (bgDrawable!=null)
+        Drawable bgDrawable = view.getBackground();
+        if (bgDrawable != null)
             //has background drawable, then draw it on the canvas
             bgDrawable.draw(canvas);
         else
@@ -113,8 +117,8 @@ public class DuaViewPagerAdapter extends PagerAdapter {
         return returnedBitmap;
     }
 
-    public void ShareImage(View v){
-        RelativeLayout rlShareView =(RelativeLayout) v.findViewById(R.id.share_view);
+    public void ShareImage(View v) {
+        RelativeLayout rlShareView = (RelativeLayout) v.findViewById(R.id.share_view);
         viewShare = rlShareView.getRootView();
         Bitmap bitmap = getBitmapFromView(viewShare);
         final Intent shareIntent = new Intent(Intent.ACTION_SEND);
@@ -132,22 +136,27 @@ public class DuaViewPagerAdapter extends PagerAdapter {
     }
 
 
-    public void copyArbicText(int currentPos){
+    public void copyArbicText(int currentPos) {
         ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
         ClipData clip = ClipData.newPlainText("arbic", duaList.get(currentPos).getDuaArbic());
-        Toast.makeText(context, "Copy to Clipboard"+duaList.get(currentPos).getDuaArbic(), Toast.LENGTH_LONG).show();
+        Toast.makeText(context, "Copy to Clipboard" + duaList.get(currentPos).getDuaArbic(), Toast.LENGTH_LONG).show();
         clipboard.setPrimaryClip(clip);
     }
 
-    public void addFavToThis(int currentPos){
-        FavSharedPreference s=new FavSharedPreference();
-        s.addFavorite(context,duaList.get(currentPos));
+    public void addFavToThis(int currentPos) {
+        FavSharedPreference s = new FavSharedPreference();
+        s.addFavorite(context, duaList.get(currentPos));
 
     }
-    public void removeFavFromThat(int currentPos)
-    {
-        FavSharedPreference shrd=new FavSharedPreference();
-        shrd.removeFavorite(context,currentPos);
+
+    public void removeFavFromThat(Dua dua,Context context) {
+
+        FavSharedPreference shrd = new FavSharedPreference();
+        shrd.removeFavorite(context, dua);
+
+        FavouriteFragment frag = new FavouriteFragment();
+        frag.removeItemFromList(dua,context);
+
     }
 
 

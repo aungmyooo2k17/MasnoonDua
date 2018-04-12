@@ -1,7 +1,9 @@
 package com.mmucsy.masnoondua.fragments;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,7 +19,9 @@ import com.mmucsy.masnoondua.FavSharedPreference;
 import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.activities.DuaDetailActivity;
+import com.mmucsy.masnoondua.adapters.DuaAdapter;
 import com.mmucsy.masnoondua.adapters.FavoriteDuaAdapter;
+import com.mmucsy.masnoondua.data.models.Dua;
 import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
 
 import butterknife.BindView;
@@ -38,7 +42,7 @@ public class FavouriteFragment extends Fragment implements DuaItemDelegate {
     TextView tvNoFav;
 
 
-    private FavoriteDuaAdapter duaAdapter;
+    public  FavoriteDuaAdapter duaAdapter;
     private FavSharedPreference favSharedPreference = new FavSharedPreference();
 
 
@@ -59,16 +63,29 @@ public class FavouriteFragment extends Fragment implements DuaItemDelegate {
         recyclerViewFavourite.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         recyclerViewFavourite.setAdapter(duaAdapter);
 
-        if (favSharedPreference.getFavorites(getContext()) == null){
+        if (favSharedPreference.getFavorites(getContext()) == null) {
             recyclerViewFavourite.setVisibility(View.INVISIBLE);
             rlNotHaveFav.setVisibility(View.VISIBLE);
-        }else {
+        } else {
             recyclerViewFavourite.setVisibility(View.VISIBLE);
             rlNotHaveFav.setVisibility(View.INVISIBLE);
         }
 
+
+
+
         return v;
     }
+
+    public void removeItemFromList(Dua dua, Context context)
+    {
+        Log.i("fggerger",FavoriteDuaAdapter.favDuaList.size()+"");
+
+//        FavoriteDuaAdapter.favDuaList.remove(dua);
+//        duaAdapter.notifyDataSetChanged();
+        duaAdapter.removee(context,dua);
+    }
+
 
     @Override
     public void onTapDua(int pos, int itemPos) {
@@ -78,10 +95,34 @@ public class FavouriteFragment extends Fragment implements DuaItemDelegate {
         i.putExtra("DUA_CATEGORY", 00);
         getContext().startActivity(i);
 
+
 //        favSharedPreference.removeFavorite(getActivity(),itemPos);
 //        duaAdapter.notifyItemRemoved(itemPos);
 //        duaAdapter.notifyItemRangeChanged(itemPos, favSharedPreference.getFavorites(getActivity()).size());
 
 
     }
+
+
+//    public void removeItemFromList(Dua dua) {
+//
+////        FavSharedPreference fs=new FavSharedPreference();
+//
+//        Log.i("Hii", favSharedPreference.getFavorites(getActivity()).size() + "sowo");
+//
+//
+//        Log.i("Hii", dua.getDuaTitle() + "");
+//
+//
+////        FavoriteDuaAdapter fd = new FavoriteDuaAdapter(getActivity(), this,
+////                fs.getFavorites(getActivity()));
+//
+//
+//        if (dua != null) {
+////            fd.removee(dua);
+////            duaAdapter.notifyDataSetChanged();
+//        } else {
+//            return;
+//        }
+//    }
 }

@@ -2,6 +2,7 @@ package com.mmucsy.masnoondua.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +23,7 @@ public class FavoriteDuaAdapter extends RecyclerView.Adapter<FavoriteDuaViewHold
 
     private LayoutInflater mLayoutInflator;
     private DuaItemDelegate duaItemDelegate;
-    private List<Dua> favDuaList;
+    public static    List<Dua> favDuaList;
     FavSharedPreference s = new FavSharedPreference();
 
     public FavoriteDuaAdapter(Context context, DuaItemDelegate duaItemDelegate, List<Dua> duaTitleListByCategoryId) {
@@ -40,12 +41,12 @@ public class FavoriteDuaAdapter extends RecyclerView.Adapter<FavoriteDuaViewHold
         return new FavoriteDuaViewHolder(v, duaItemDelegate, favDuaList);
     }
 
-    public void remove(Context context, int position) {
-
-        s.removeFavorite(context, position);
-        favDuaList.remove(favDuaList.get(position));
-
+    public void removee(Context context,Dua dua) {
+        Log.i("Hello", dua + "");
+        s.removeFavorite(context,dua);
+        favDuaList.remove(dua);
         notifyDataSetChanged();
+
 
     }
 

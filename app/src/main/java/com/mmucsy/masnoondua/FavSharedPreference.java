@@ -6,6 +6,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.mmucsy.masnoondua.adapters.DuaAdapter;
 import com.mmucsy.masnoondua.adapters.FavoriteDuaAdapter;
 import com.mmucsy.masnoondua.data.models.Dua;
 import com.mmucsy.masnoondua.fragments.FavouriteFragment;
@@ -46,31 +47,33 @@ public class FavSharedPreference {
     }
 
 
-    public void removeFavorite(Context context, int position) {
-
+    public void removeFavorite(Context context, Dua dua) {
         ArrayList<Dua> favorites = getFavorites(context);
-        Log.i("SharefPreference", favorites.size() + "");
         if (favorites != null) {
 
-            if (position < favorites.size()) {
-                favorites.remove(favorites.get(position));
+            for (int i = 0; i < favorites.size(); i++) {
+                if (dua.getDua_id()==favorites.get(i).getDua_id()) {
+                    favorites.remove(dua);
+                    break;
 
+                }
 
             }
-
             saveFavorites(context, favorites);
+
+
+
         }
     }
 
     public void addFavorite(Context context, Dua dua) {
-        Log.i("FavSharedPreference", dua.getDua_id() + "");
+//        Log.i("FavSharedPreference", dua.getDua_id() + "");
 
         List<Dua> favorites = getFavorites(context);
 
         if (favorites == null)
             favorites = new ArrayList<Dua>();
         favorites.add(dua);
-        Toast.makeText(context, "Added To Favourite", Toast.LENGTH_LONG).show();
 
         saveFavorites(context, favorites);
     }

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="net.aungpyaephyo:mmtextview-1.1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/mmtextview-1.1.aar/3bfbcb0cbe172b2896cc8f614ac2c0f0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/mmtextview-1.1.aar/3bfbcb0cbe172b2896cc8f614ac2c0f0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.aungpyaephyo/mmtextview/1.1/4227a05a432aba92d474594a7816d5ac38514ce4/mmtextview-1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
