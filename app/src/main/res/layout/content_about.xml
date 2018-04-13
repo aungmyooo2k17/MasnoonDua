@@ -29,51 +29,57 @@
                 android:layout_marginTop="@dimen/dimen_8dp"
                 android:fontFamily="serif-monospace"
                 android:letterSpacing="0.1"
-                android:text="Created By"
+                android:text="Developed By"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/text_size"
                 android:textStyle="bold" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image"
+                android:layout_marginTop="@dimen/margin_medium"
                 android:layout_width="@dimen/dimen_logo"
                 android:layout_height="@dimen/dimen_logo"
+                android:layout_marginBottom="@dimen/margin_medium"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/m2cslogo" />
+                android:src="@drawable/logo" />
         </LinearLayout>
 
-        <LinearLayout
+
+
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_margin"
-            android:layout_marginTop="@dimen/fab_margin"
-            android:orientation="horizontal"
-            android:weightSum="3">
+            android:text="Special Thanks To"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:textSize="@dimen/text_small"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"/>
 
-            <ImageView
-                android:id="@+id/web_addr"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_weight="1"
-                android:onClick="OpenWebsite"
-                android:src="@drawable/ic_internet" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Al Haj Maulana Saeedullah Mahmudi"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:textSize="@dimen/text_regular_3x"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"/>
 
-            <ImageView
-                android:id="@+id/fac_addr"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_weight="1"
-                android:onClick="OpenFacebook"
-                android:src="@drawable/ic_facebook" />
 
-            <ImageView
-                android:id="@+id/email_addr"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_weight="1"
-                android:onClick="OpenEmail"
-                android:src="@drawable/ic_email" />
-        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:textSize="@dimen/text_regular_2x"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:text="Contact Us"/>
+
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
@@ -93,39 +99,83 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/image_phone"
-                    android:layout_width="wrap_content"
+                <FrameLayout
+                    android:id="@+id/info1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_phone" />
+                    android:onClick="OpenWebsite">
 
-                <TextView
-                    android:id="@+id/txt_phone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="14dp"
-                    android:layout_toEndOf="@+id/image_phone"
-                    android:paddingLeft="@dimen/spacing_large"
-                    android:text="092620654955" />
+                    <ImageView
+                        android:id="@+id/image_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_internet" />
 
-                <ImageView
-                    android:id="@+id/image_home"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/image_phone"
-                    android:paddingTop="@dimen/spacing_large"
-                    android:src="@drawable/ic_house" />
+                    <TextView
+                        android:id="@+id/txt_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:text="http://m2cs.org/" />
 
-                <TextView
-                    android:id="@+id/txt_addr"
-                    android:layout_width="wrap_content"
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/info2"
+                    android:layout_below="@id/info1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/txt_phone"
-                    android:layout_marginLeft="@dimen/spacing_large"
-                    android:layout_toEndOf="@+id/image_home"
-                    android:paddingLeft="@dimen/spacing_large"
-                    android:paddingTop="@dimen/spacing_large"
-                    android:text="No.(4) Main Road , Shwe Pyi Thar Township, Yangon, Myanmar." />
+                    android:onClick="OpenFacebook">
+
+                    <ImageView
+                        android:id="@+id/image_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/image_phone"
+                        android:paddingTop="@dimen/spacing_large"
+                        android:src="@drawable/ic_facebook" />
+
+                    <TextView
+                        android:id="@+id/txt_addr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_phone"
+                        android:layout_marginLeft="@dimen/spacing_large"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:paddingTop="@dimen/spacing_large"
+                        android:text="https://www.facebook.com/M2CS-179991619396541/" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/info3"
+                    android:layout_below="@id/info2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="OpenEmail">
+
+                    <ImageView
+                        android:id="@+id/image_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/image_phone"
+                        android:paddingTop="@dimen/spacing_large"
+                        android:src="@drawable/ic_email" />
+
+                    <TextView
+                        android:id="@+id/txt_mail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_phone"
+                        android:layout_marginLeft="@dimen/spacing_large"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:paddingTop="@dimen/spacing_large"
+                        android:text="m2cs786@gmail.com" />
+
+                </FrameLayout>
+
 
             </RelativeLayout>
 

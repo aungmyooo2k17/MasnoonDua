@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="150dp">
+    android:layout_height="200dp">
 
     <ImageView
         android:id="@+id/iv_dua_recent"
@@ -12,7 +12,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="200dp"
         android:background="@color/light_dark" />
 
     <LinearLayout
@@ -28,7 +28,7 @@
             android:gravity="center"
             android:text="မုစ်လင်မ်အချင်းချင်း တွေ့ဆုံသောအခါ နှုတ်ခွန်းဆက်သရန်"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_small" />
+            android:textSize="@dimen/text_regular" />
 
         <TextView
             android:id="@+id/tv_dua_s"
@@ -40,7 +40,7 @@
             android:paddingRight="@dimen/margin_medium_2"
             android:text=" اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُه"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_dua_recent" />
+            android:textSize="@dimen/text_regular_3x" />
     </LinearLayout>
 
 

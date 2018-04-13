@@ -21,6 +21,7 @@ import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.adapters.DuaViewPagerAdapter;
 import com.mmucsy.masnoondua.data.db.DatabaseAccess;
+import com.mmucsy.masnoondua.data.models.Category;
 import com.mmucsy.masnoondua.data.models.Dua;
 import com.mmucsy.masnoondua.fragments.FavouriteFragment;
 
@@ -46,6 +47,7 @@ public class DuaDetailActivity extends AppCompatActivity implements BottomNaviga
 
     private DatabaseAccess databaseAccess;
     private List<Dua> duaList;
+    private List<Category> catList;
     private int currentPos;
     private View v;
 
@@ -60,23 +62,15 @@ public class DuaDetailActivity extends AppCompatActivity implements BottomNaviga
         setContentView(R.layout.activity_dua_detail);
         ButterKnife.bind(this);
 
-
         duaPosition = String.valueOf(getIntent().getExtras().getInt("ONTAP_POS"));
 
         duaCategory = getIntent().getExtras().getInt("DUA_CATEGORY");
-//        Log.d(MasnoonDuaApp.TAG, "onCreate: " + duaCategory + duaPosition);
-//        Log.d("Position..", duaCategory + " " + duaPosition);
 
 
         if (duaCategory == 00) {
             duaList = favSharedPreference.getFavorites(this);
 
         } else if (duaCategory == 000) {
-//            Log.d(MasnoonDuaApp.TAG, "onCreate:is equal 000 " + duaCategory);
-//            databaseAccess = DatabaseAccess.getInstance(this);
-//            databaseAccess.open();
-//            duaList = databaseAccess.getDuaObj(Integer.parseInt(duaPosition));
-//            databaseAccess.close();
 
         } else {
             databaseAccess = DatabaseAccess.getInstance(this);
@@ -85,9 +79,11 @@ public class DuaDetailActivity extends AppCompatActivity implements BottomNaviga
             databaseAccess.close();
         }
 
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar.setTitle("Hello World");
+
+
 
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation_dua_item);
 
@@ -140,12 +136,8 @@ public class DuaDetailActivity extends AppCompatActivity implements BottomNaviga
         switch (item.getItemId()) {
             case R.id.action_favourite_dua:
                 currentPos = viewPagerDua.getCurrentItem();
-//                Log.i("Position...", duaList.get(currentPos).getDuaTitle());
-
 
                 if (checkFavoriteItem(duaList.get(currentPos))) {
-//                    Log.i("Position...", currentPos + "soe");
-//                    duaViewPagerAdapter.removeFavFromThat(duaList.get(viewPagerDua.getCurrentItem()),this);
                     favSharedPreference.removeFavorite(this, duaList.get(currentPos));
                     Log.d(MasnoonDuaApp.TAG, "onNavigationItemSelected: " + duaList.get(currentPos).getDuaTitle() + duaList.get(currentPos).getDua_id());
                     Toast.makeText(getApplicationContext(), "Item Removed", Toast.LENGTH_SHORT).show();
@@ -181,10 +173,8 @@ public class DuaDetailActivity extends AppCompatActivity implements BottomNaviga
     public void onPageSelected(int p) {
 //        Log.i("Position", p + "dua");
         if (checkFavoriteItem(duaList.get(p))) {
-            Toast.makeText(getApplicationContext(), "have fav", Toast.LENGTH_SHORT).show();
             bottomNavigationView.getMenu().findItem(R.id.action_favourite_dua).setIcon(R.drawable.favorite_on);
         } else if (!checkFavoriteItem(duaList.get(p))) {
-            Toast.makeText(getApplicationContext(), "not have fav", Toast.LENGTH_SHORT).show();
             bottomNavigationView.getMenu().findItem(R.id.action_favourite_dua).setIcon(R.drawable.favorite_off);
 
         }

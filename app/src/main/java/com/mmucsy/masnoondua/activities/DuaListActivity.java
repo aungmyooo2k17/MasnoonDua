@@ -40,7 +40,7 @@ public class DuaListActivity extends AppCompatActivity implements DuaItemDelegat
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dua_list);
         ButterKnife.bind(this);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         duaCategoryPos = getIntent().getExtras().getInt("POSITION");
         DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
@@ -51,7 +51,6 @@ public class DuaListActivity extends AppCompatActivity implements DuaItemDelegat
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar.setTitle("BATHROOM");
 
         duaAdapter = new DuaAdapter(this, this, duaList);
         recyclerViewDuaList.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
@@ -60,7 +59,6 @@ public class DuaListActivity extends AppCompatActivity implements DuaItemDelegat
 
     @Override
     public void onTapDua(int duaId, int itemPosition) {
-        Log.d(MasnoonDuaApp.TAG, "onTapDua: " + duaId);
         recentSharedPreference.addRecent(this, duaId);
         DuaRecentAdapter duaRecentAdapter = new DuaRecentAdapter();
         duaRecentAdapter.notifyDataSetChanged();

@@ -9,15 +9,23 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.mmucsy.masnoondua.R;
 
+import butterknife.BindView;
+
 public class AboutActivity extends AppCompatActivity {
+
+
+
 
     public static String FACEBOOK_URL = "https://www.facebook.com/M2CS-179991619396541";
     public static String FACEBOOK_PAGE_ID = "M2CS-179991619396541";
-    ImageView imgFb, imgWeb, imgEmail;
+
+    FrameLayout imgFb, imgWeb, imgEmail;
+
     Toolbar toolbar;
 
     @Override
@@ -30,20 +38,20 @@ public class AboutActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(R.string.app_name);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        imgFb = findViewById(R.id.info2);
+        imgWeb = findViewById(R.id.info1);
+        imgEmail = findViewById(R.id.info3);
 
-        imgFb = findViewById(R.id.fac_addr);
-        imgWeb = findViewById(R.id.web_addr);
-        imgEmail = findViewById(R.id.email_addr);
     }
 
-    public void OpenWebsite(View view) {
-        String page = "https:\\www.google.com";
+    public void OpenWebsite(View v) {
+        String page = "http:\\m2cs.org";
         Uri webpage = Uri.parse(page);
         Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
         startActivity(intent);
     }
 
-    public void OpenFacebook(View view) {
+    public void OpenFacebook(View v) {
 
         Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
         String facebookUrl = getFacebookPageURL(this);
@@ -52,10 +60,10 @@ public class AboutActivity extends AppCompatActivity {
 
     }
 
-    public void OpenEmail(View view) {
+    public void OpenEmail(View v) {
 
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                "mailto", "soethan762@gmail.com", null));
+                "mailto", "m2cs786@gmail.com", null));
         startActivity(Intent.createChooser(emailIntent, "Send email..."));
 
     }

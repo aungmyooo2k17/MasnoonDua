@@ -97,12 +97,14 @@ public class FavouriteFragment extends Fragment implements DuaItemDelegate {
         duaAdapter = new FavoriteDuaAdapter(getContext(), this, favSharedPreference.getFavorites(getActivity()));
         recyclerViewFavourite.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         recyclerViewFavourite.setAdapter(duaAdapter);
-        if (favSharedPreference.getFavorites(getContext()).size() == 0) {
-            recyclerViewFavourite.setVisibility(View.INVISIBLE);
-            rlNotHaveFav.setVisibility(View.VISIBLE);
-        } else {
-            recyclerViewFavourite.setVisibility(View.VISIBLE);
-            rlNotHaveFav.setVisibility(View.INVISIBLE);
+        if(favSharedPreference.getFavorites(getContext()) != null) {
+            if (favSharedPreference.getFavorites(getContext()).size() == 0) {
+                recyclerViewFavourite.setVisibility(View.INVISIBLE);
+                rlNotHaveFav.setVisibility(View.VISIBLE);
+            } else {
+                recyclerViewFavourite.setVisibility(View.VISIBLE);
+                rlNotHaveFav.setVisibility(View.INVISIBLE);
+            }
         }
 
     }

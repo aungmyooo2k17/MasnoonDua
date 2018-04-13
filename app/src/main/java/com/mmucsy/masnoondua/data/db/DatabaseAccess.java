@@ -81,6 +81,25 @@ public class DatabaseAccess {
         return list;
     }
 
+    public List<Category> getCategoryById(int catId) {
+        List<Category> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT * FROM category WHERE category_id = "+catId, null);
+        cursor.moveToFirst();
+        if(cursor.moveToFirst()) {
+            while (!cursor.isAfterLast()) {
+                Category category = new Category();
+                category.setCategory_id(cursor.getInt(0));
+                category.setCategory(cursor.getString(1));
+                list.add(category);
+                Log.d(MasnoonDuaApp.TAG, "getCategory: " + cursor.getInt(0) + cursor.getString(1));
+
+                cursor.moveToNext();
+            }
+        }
+        cursor.close();
+        return list;
+    }
+
     public List<String> getDuaTitle() {
         List<String> list = new ArrayList<>();
         Cursor cursor = database.rawQuery("SELECT dua_title FROM dua", null);

@@ -3,7 +3,6 @@ package com.mmucsy.masnoondua;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.mmucsy.masnoondua.data.models.Dua;
@@ -66,7 +65,6 @@ public class RecentSharedPreference {
         if (favorites == null)
             favorites = new ArrayList<Integer>();
         favorites.add(duaId);
-        Toast.makeText(context, "Added To Recent", Toast.LENGTH_LONG).show();
 
         saveRecent(context, favorites);
     }

@@ -1,4 +1,4 @@
-#Fri Apr 13 11:28:43 MMT 2018
-base.0=/home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/build/intermediates/transforms/dexMerger/debug/8
+#Fri Apr 13 17:00:54 MMT 2018
+base.0=/Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/build/intermediates/transforms/dexMerger/debug/7
 path.0=classes.dex
 renamed.0=classes.dex

@@ -114,8 +114,8 @@ public class DuaViewPagerAdapter extends PagerAdapter {
     }
 
     public void ShareImage(View v) {
-        RelativeLayout rlShareView = (RelativeLayout) v.findViewById(R.id.share_view_s);
-        viewShare = rlShareView.getRootView();
+        RelativeLayout rlShareView = (RelativeLayout) v.findViewById(R.id.root);
+        viewShare = rlShareView.getChildAt(0);
         Bitmap bitmap = getBitmapFromView(viewShare);
         final Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("image/jpg");

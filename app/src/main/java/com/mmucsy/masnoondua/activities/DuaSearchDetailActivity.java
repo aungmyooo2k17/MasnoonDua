@@ -9,6 +9,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -38,7 +39,7 @@ import butterknife.ButterKnife;
 
 public class DuaSearchDetailActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-    @BindView(R.id.share_view_s)
+    @BindView(R.id.root_v)
     RelativeLayout rlShareView;
 
     @BindView(R.id.tv_dua_s)
@@ -138,7 +139,11 @@ public class DuaSearchDetailActivity extends AppCompatActivity implements Bottom
                 }
                 return true;
             case R.id.action_share_dua:
-                v = rlShareView.getRootView();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                    requestPermissions(new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+                }
+                v = rlShareView.getChildAt(0);
                 ShareImage(v);
 
                 return true;
