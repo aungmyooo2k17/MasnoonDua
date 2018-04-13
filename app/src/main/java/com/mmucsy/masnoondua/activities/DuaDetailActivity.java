@@ -60,6 +60,7 @@ public class DuaDetailActivity extends AppCompatActivity implements BottomNaviga
         setContentView(R.layout.activity_dua_detail);
         ButterKnife.bind(this);
 
+
         duaPosition = String.valueOf(getIntent().getExtras().getInt("ONTAP_POS"));
 
         duaCategory = getIntent().getExtras().getInt("DUA_CATEGORY");
@@ -104,15 +105,6 @@ public class DuaDetailActivity extends AppCompatActivity implements BottomNaviga
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.bottom_navigation_dua_item, menu);
-        this.menu = menu;
-        return true;
-
-    }
-
     public boolean checkFavoriteItem(Dua checkCode) {
         boolean check = false;
         FavSharedPreference shrdPrefrefence = new FavSharedPreference();
@@ -155,7 +147,7 @@ public class DuaDetailActivity extends AppCompatActivity implements BottomNaviga
 //                    Log.i("Position...", currentPos + "soe");
 //                    duaViewPagerAdapter.removeFavFromThat(duaList.get(viewPagerDua.getCurrentItem()),this);
                     favSharedPreference.removeFavorite(this, duaList.get(currentPos));
-                    Log.d(MasnoonDuaApp.TAG, "onNavigationItemSelected: "+duaList.get(currentPos).getDuaTitle()+duaList.get(currentPos).getDua_id());
+                    Log.d(MasnoonDuaApp.TAG, "onNavigationItemSelected: " + duaList.get(currentPos).getDuaTitle() + duaList.get(currentPos).getDua_id());
                     Toast.makeText(getApplicationContext(), "Item Removed", Toast.LENGTH_SHORT).show();
                     item.setIcon(R.drawable.favorite_off);
                 } else {
@@ -204,6 +196,12 @@ public class DuaDetailActivity extends AppCompatActivity implements BottomNaviga
 
     }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return true;
+    }
 }
 

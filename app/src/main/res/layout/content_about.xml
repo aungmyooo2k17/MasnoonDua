@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        tools:context=".activities.AboutActivity"
+        tools:showIn="@layout/activity_about">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_margin"
+            android:paddingTop="@dimen/activity_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:fontFamily="serif-monospace"
+                android:letterSpacing="0.1"
+                android:text="Created By"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="@dimen/dimen_logo"
+                android:layout_height="@dimen/dimen_logo"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/m2cslogo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/web_addr"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:onClick="OpenWebsite"
+                android:src="@drawable/ic_internet" />
+
+            <ImageView
+                android:id="@+id/fac_addr"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:onClick="OpenFacebook"
+                android:src="@drawable/ic_facebook" />
+
+            <ImageView
+                android:id="@+id/email_addr"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:onClick="OpenEmail"
+                android:src="@drawable/ic_email" />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:background="@color/colorPrimary"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="7dp"
+            app:cardUseCompatPadding="true"
+            app:contentPaddingBottom="16dp"
+            app:contentPaddingLeft="16dp"
+            app:contentPaddingRight="16dp"
+            app:contentPaddingTop="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_phone" />
+
+                <TextView
+                    android:id="@+id/txt_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_toEndOf="@+id/image_phone"
+                    android:paddingLeft="@dimen/spacing_large"
+                    android:text="092620654955" />
+
+                <ImageView
+                    android:id="@+id/image_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_phone"
+                    android:paddingTop="@dimen/spacing_large"
+                    android:src="@drawable/ic_house" />
+
+                <TextView
+                    android:id="@+id/txt_addr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_phone"
+                    android:layout_marginLeft="@dimen/spacing_large"
+                    android:layout_toEndOf="@+id/image_home"
+                    android:paddingLeft="@dimen/spacing_large"
+                    android:paddingTop="@dimen/spacing_large"
+                    android:text="No.(4) Main Road , Shwe Pyi Thar Township, Yangon, Myanmar." />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

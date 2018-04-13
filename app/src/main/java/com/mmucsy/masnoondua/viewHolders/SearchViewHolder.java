@@ -13,6 +13,7 @@ import com.mmucsy.masnoondua.delegates.SearchItemDelegate;
 
 import net.aungpyaephyo.mmtextview.components.MMTextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -29,34 +30,34 @@ public class SearchViewHolder extends RecyclerView.ViewHolder implements View.On
 
 
     private SearchItemDelegate searchItemDelegate;
-    private List<String> duaTitleListByCategoryId;
-    private List<Integer> duaIdList;
+    //    private List<String> duaTitleListByCategoryId;
+//    private List<Integer> duaIdList;
+    private ArrayList<Dua> duaArrayList = new ArrayList<>();
     private int pos;
 
 
-    public SearchViewHolder(View itemView, SearchItemDelegate searchItemDelegate, List<String> duaTitleListByCategoryId, List<Integer> duaIdList) {
+    public SearchViewHolder(View itemView, SearchItemDelegate searchItemDelegate, ArrayList<Dua> duas) {
         super(itemView);
         ButterKnife.bind(this, itemView);
 
         favDuaTitle.setTypeface(MasnoonDuaApp.typeface);
 
         this.searchItemDelegate = searchItemDelegate;
-        this.duaTitleListByCategoryId = duaTitleListByCategoryId;
-        this.duaIdList = duaIdList;
+        this.duaArrayList = duas;
+
         itemView.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view) {
-        searchItemDelegate.onTapDua(duaIdList.get(pos));
-        Log.d(MasnoonDuaApp.TAG, "onClick: "+duaTitleListByCategoryId.get(pos));
+        searchItemDelegate.onTapDua(duaArrayList.get(pos));
 
     }
 
     public void bind(int position) {
         pos = position;
-        favDuaTitle.setText(duaTitleListByCategoryId.get(pos)+"");
+        favDuaTitle.setText(duaArrayList.get(pos).getDuaTitle() + "");
     }
 
 }

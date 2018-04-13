@@ -27,6 +27,8 @@ import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static java.security.AccessController.getContext;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -42,7 +44,7 @@ public class FavouriteFragment extends Fragment implements DuaItemDelegate {
     TextView tvNoFav;
 
 
-    public  FavoriteDuaAdapter duaAdapter;
+    public FavoriteDuaAdapter duaAdapter;
     private FavSharedPreference favSharedPreference = new FavSharedPreference();
 
 
@@ -60,7 +62,6 @@ public class FavouriteFragment extends Fragment implements DuaItemDelegate {
         tvNoFav.setTypeface(MasnoonDuaApp.typeface);
 
 
-
         duaAdapter = new FavoriteDuaAdapter(getContext(), this, favSharedPreference.getFavorites(getActivity()));
         recyclerViewFavourite.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         recyclerViewFavourite.setAdapter(duaAdapter);
@@ -73,19 +74,7 @@ public class FavouriteFragment extends Fragment implements DuaItemDelegate {
         }
 
 
-
-
         return v;
-    }
-
-
-    public void removeItemFromList(Dua dua, Context context)
-    {
-//        Log.i("fggerger",FavoriteDuaAdapter.favDuaList.size()+"");
-
-//        FavoriteDuaAdapter.favDuaList.remove(dua);
-//        duaAdapter.notifyDataSetChanged();
-//        duaAdapter.removee(context,dua);
     }
 
 
@@ -99,42 +88,13 @@ public class FavouriteFragment extends Fragment implements DuaItemDelegate {
         getContext().startActivity(i);
 
 
-//        favSharedPreference.removeFavorite(getActivity(),itemPos);
-//        duaAdapter.notifyItemRemoved(itemPos);
-//        duaAdapter.notifyItemRangeChanged(itemPos, favSharedPreference.getFavorites(getActivity()).size());
-
-
     }
-
-
-//    public void removeItemFromList(Dua dua) {
-//
-////        FavSharedPreference fs=new FavSharedPreference();
-//
-//        Log.i("Hii", favSharedPreference.getFavorites(getActivity()).size() + "sowo");
-//
-//
-//        Log.i("Hii", dua.getDuaTitle() + "");
-//
-//
-////        FavoriteDuaAdapter fd = new FavoriteDuaAdapter(getActivity(), this,
-////                fs.getFavorites(getActivity()));
-//
-//
-//        if (dua != null) {
-////            fd.removee(dua);
-////            duaAdapter.notifyDataSetChanged();
-//        } else {
-//            return;
-//        }
-//    }
 
 
     @Override
     public void onStart() {
         super.onStart();
         duaAdapter = new FavoriteDuaAdapter(getContext(), this, favSharedPreference.getFavorites(getActivity()));
-        Log.d(MasnoonDuaApp.TAG, "onCreateView: "+favSharedPreference.getFavorites(getContext()).size());
         recyclerViewFavourite.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         recyclerViewFavourite.setAdapter(duaAdapter);
         if (favSharedPreference.getFavorites(getContext()).size() == 0) {

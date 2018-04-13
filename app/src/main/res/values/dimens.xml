@@ -33,4 +33,12 @@
 
     <dimen name="text_dua_recent">26sp</dimen>
 
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="dimen_8dp">8dp</dimen>
+    <dimen name="dimen_logo">100dp</dimen>
+    <dimen name="text_size">30dp</dimen>
+
+    <dimen name="spacing_large">16dp</dimen>
+
+
 </resources>

@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 
 import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
@@ -39,15 +40,13 @@ public class DuaListActivity extends AppCompatActivity implements DuaItemDelegat
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dua_list);
         ButterKnife.bind(this);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         duaCategoryPos = getIntent().getExtras().getInt("POSITION");
         DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
         databaseAccess.open();
         List<Dua> duaList = databaseAccess.getDuaByCategoryId(duaCategoryPos);
         databaseAccess.close();
-
-
-
 
 
         setSupportActionBar(toolbar);
@@ -61,7 +60,7 @@ public class DuaListActivity extends AppCompatActivity implements DuaItemDelegat
 
     @Override
     public void onTapDua(int duaId, int itemPosition) {
-        Log.d(MasnoonDuaApp.TAG, "onTapDua: "+duaId);
+        Log.d(MasnoonDuaApp.TAG, "onTapDua: " + duaId);
         recentSharedPreference.addRecent(this, duaId);
         DuaRecentAdapter duaRecentAdapter = new DuaRecentAdapter();
         duaRecentAdapter.notifyDataSetChanged();
@@ -69,5 +68,13 @@ public class DuaListActivity extends AppCompatActivity implements DuaItemDelegat
         i.putExtra("ONTAP_POS", itemPosition);
         i.putExtra("DUA_CATEGORY", duaCategoryPos);
         startActivity(i);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return true;
     }
 }

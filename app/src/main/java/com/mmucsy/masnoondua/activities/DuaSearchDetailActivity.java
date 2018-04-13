@@ -36,7 +36,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class DuaSearchDetailActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
+public class DuaSearchDetailActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     @BindView(R.id.share_view_s)
     RelativeLayout rlShareView;
@@ -66,13 +66,15 @@ public class DuaSearchDetailActivity extends AppCompatActivity implements Bottom
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dua_search_detail);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         ButterKnife.bind(this);
 
         favSharedPreference = new FavSharedPreference();
 
         s = getIntent().getExtras().getInt("DUA_ID");
 
-        Log.d(MasnoonDuaApp.TAG, "onCreate: "+s);
+        Log.d(MasnoonDuaApp.TAG, "onCreate: " + s);
         databaseAccess = DatabaseAccess.getInstance(this);
         databaseAccess.open();
         duaList = databaseAccess.getDuaByDuaTitle(s);
@@ -91,14 +93,14 @@ public class DuaSearchDetailActivity extends AppCompatActivity implements Bottom
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.bottom_navigation_dua_item, menu);
-        this.menu = menu;
-        return true;
-
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.bottom_navigation_dua_item, menu);
+//        this.menu = menu;
+//        return true;
+//
+//    }
 
     public boolean checkFavoriteItem(Dua checkCode) {
         boolean check = false;
@@ -202,5 +204,12 @@ public class DuaSearchDetailActivity extends AppCompatActivity implements Bottom
         }
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
 
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

@@ -19,8 +19,11 @@ import com.mmucsy.masnoondua.activities.DuaDetailActivity;
 import com.mmucsy.masnoondua.activities.DuaSearchDetailActivity;
 import com.mmucsy.masnoondua.adapters.FavoriteDuaAdapter;
 import com.mmucsy.masnoondua.adapters.SearchAdapter;
+import com.mmucsy.masnoondua.data.models.Dua;
 import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
 import com.mmucsy.masnoondua.delegates.SearchItemDelegate;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,7 +31,7 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SearchFragment extends Fragment implements SearchItemDelegate{
+public class SearchFragment extends Fragment implements SearchItemDelegate {
 
     @BindView(R.id.rv_search_list)
     RecyclerView rvSearch;
@@ -37,6 +40,7 @@ public class SearchFragment extends Fragment implements SearchItemDelegate{
     EditText editTextSearch;
 
     private SearchAdapter duaAdapter;
+    final ArrayList<Dua> filterList = new ArrayList<>();
 
 
     public SearchFragment() {
@@ -50,7 +54,7 @@ public class SearchFragment extends Fragment implements SearchItemDelegate{
         View v = inflater.inflate(R.layout.fragment_search, container, false);
         ButterKnife.bind(this, v);
 
-        duaAdapter = new SearchAdapter(getContext(), this, MasnoonDuaApp.duaTitleList, MasnoonDuaApp.duIdList);
+        duaAdapter = new SearchAdapter(getContext(), this, (ArrayList<Dua>) MasnoonDuaApp.duaAllList);
         rvSearch.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         rvSearch.setAdapter(duaAdapter);
 
@@ -62,12 +66,25 @@ public class SearchFragment extends Fragment implements SearchItemDelegate{
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-//                duaAdapter.getFilter().filter(s.toString());
+                filterList.clear();
+                if (s.toString().length() == 0) {
+                    filterList.addAll(MasnoonDuaApp.duaAllList);
+                } else {
+                    for (int i = 0; i < MasnoonDuaApp.duaAllList.size(); i++) {
+                        if (MasnoonDuaApp.duaAllList.get(i).getDuaTitle().contains(s.toString().toLowerCase())) {
+                            filterList.add(MasnoonDuaApp.duaAllList.get(i));
+                        }
+                    }
+                }
+
+                duaAdapter.swipeList(filterList);
+
+
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                duaAdapter.getFilter().filter(s.toString());
+//                duaAdapter.getFilter().filter(s.toString());
             }
         });
 
@@ -75,10 +92,16 @@ public class SearchFragment extends Fragment implements SearchItemDelegate{
         return v;
     }
 
+//    @Override
+//    public void onTapDua(int duaId) {
+//        Intent i = new Intent(getContext(), DuaSearchDetailActivity.class);
+//        i.putExtra("DUA_ID", duaId);
+//        getContext().startActivity(i);
+//    }
     @Override
-    public void onTapDua(int duaId) {
+    public void onTapDua(Dua dua) {
         Intent i = new Intent(getContext(), DuaSearchDetailActivity.class);
-        i.putExtra("DUA_ID", duaId);
+        i.putExtra("DUA_ID", dua.getDua_id());
         getContext().startActivity(i);
     }
 }

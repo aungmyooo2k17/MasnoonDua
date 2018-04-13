@@ -2,6 +2,7 @@ package com.mmucsy.masnoondua.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.Filterable;
 
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.FavSharedPreference;
+import com.mmucsy.masnoondua.data.models.Dua;
 import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
 import com.mmucsy.masnoondua.delegates.SearchItemDelegate;
 import com.mmucsy.masnoondua.viewHolders.SearchViewHolder;
@@ -21,7 +23,7 @@ import java.util.List;
  * Created by aungmyooo on 4/10/18.
  */
 
-public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder> implements Filterable {
+public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder> {
 
     private LayoutInflater mLayoutInflator;
     private SearchItemDelegate searchItemDelegate;
@@ -29,14 +31,17 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder> implem
     private List<String> filteredData;
     private List<Integer> duaIdList;
     private FavSharedPreference s = new FavSharedPreference();
-    private ItemFilter mFilter = new ItemFilter();
+//    private ItemFilter mFilter = new ItemFilter();
+    private ArrayList<Dua> filteredList = new ArrayList<>();
+    private ArrayList<Dua> duaArrayList = new ArrayList<>();
 
-    public SearchAdapter(Context context, SearchItemDelegate searchItemDelegate, List<String> duaList, List<Integer> duaIdList) {
+
+    public SearchAdapter(Context context, SearchItemDelegate searchItemDelegate, ArrayList<Dua> duaList) {
         mLayoutInflator = LayoutInflater.from(context);
         this.searchItemDelegate = searchItemDelegate;
-        this.duaList = duaList;
-        this.duaIdList = duaIdList;
-        this.filteredData = duaList;
+        this.duaArrayList = duaList;
+//        this.duaIdList = duaIdList;
+        this.filteredList = duaList;
 
     }
 
@@ -44,7 +49,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder> implem
     public SearchViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = mLayoutInflator.inflate(R.layout.favorite_dua_item, parent, false);
 
-        return new SearchViewHolder(v, searchItemDelegate, duaList, duaIdList);
+        return new SearchViewHolder(v, searchItemDelegate, duaArrayList);
     }
 
 
@@ -55,66 +60,18 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder> implem
 
     @Override
     public int getItemCount() {
-        return filteredData.size();
+        return filteredList.size();
 
 
     }
 
-    @Override
-    public Filter getFilter() {
-        return mFilter;
+    public void swipeList(ArrayList<Dua> duaList) {
+        this.duaArrayList = duaList;
+        this.filteredList = duaList;
+//        Log.i("Patient : ", this.duaList.size() + "");
+//        Log.i("Filter List : ", this.filteredList.size() + "");
+        notifyDataSetChanged();
     }
 
-    private void filter(String text) {
-        //new array list that will hold the filtered data
-        ArrayList<String> filterdNames = new ArrayList<>();
 
-        //looping through existing elements
-        for (String s : duaList) {
-            //if the existing elements contains the search input
-            if (s.toLowerCase().contains(text.toLowerCase())) {
-                //adding the element to filtered list
-
-                filterdNames.add(s);
-            }
-        }
-
-    }
-
-    private class ItemFilter extends Filter {
-        @Override
-        protected FilterResults performFiltering(CharSequence constraint) {
-
-            String filterString = constraint.toString().toLowerCase();
-
-            FilterResults results = new FilterResults();
-
-            final List<String> list = duaList;
-
-            int count = list.size();
-            final ArrayList<String> nlist = new ArrayList<String>(count);
-
-            String filterableString ;
-
-            for (int i = 0; i < count; i++) {
-                filterableString = list.get(i);
-                if (filterableString.toLowerCase().contains(filterString)) {
-                    nlist.add(filterableString);
-                }
-            }
-
-            results.values = nlist;
-            results.count = nlist.size();
-
-            return results;
-        }
-
-        @SuppressWarnings("unchecked")
-        @Override
-        protected void publishResults(CharSequence constraint, FilterResults results) {
-            filteredData = (ArrayList<String>) results.values;
-            notifyDataSetChanged();
-        }
-
-    }
 }

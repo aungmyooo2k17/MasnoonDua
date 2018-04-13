@@ -28,8 +28,12 @@
         <activity
             android:name=".activities.DuaListActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.AboutActivity" />
-        <activity android:name=".activities.DuaSearchDetailActivity"></activity>
+        <activity
+            android:name=".activities.AboutActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.DuaSearchDetailActivity"
+            android:theme="@style/AppThem"></activity>
     </application>
 
 </manifest>
