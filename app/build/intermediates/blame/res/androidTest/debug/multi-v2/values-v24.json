@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "/home/soe_than/Documents/AndroidStudioProjects/MasnoonDua/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/aungmyooo/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/5aab7451d57104011da4d50f73bc9020/res/values-v24/values-v24.xml",
+                    "source": "/home/soe_than/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/5ebc8ed2d7d18a8640950d5c348a1241/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/aungmyooo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1087c3bb076dad42d4ee65aed0b442d8/res/values-v24/values-v24.xml",
+                    "source": "/home/soe_than/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f48b1acaaaadee7d248c0567ef71085b/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
