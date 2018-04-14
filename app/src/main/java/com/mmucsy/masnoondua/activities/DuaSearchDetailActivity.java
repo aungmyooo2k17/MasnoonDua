@@ -13,19 +13,17 @@ import android.os.Build;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mmucsy.masnoondua.FavSharedPreference;
+import com.mmucsy.masnoondua.SharedPreference.FavSharedPreference;
 import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.data.db.DatabaseAccess;
@@ -88,6 +86,7 @@ public class DuaSearchDetailActivity extends AppCompatActivity implements Bottom
 
         tvDuaTrans.setTypeface(MasnoonDuaApp.typeface);
         tvDuaTitle.setTypeface(MasnoonDuaApp.typeface);
+        tvDua.setTypeface(MasnoonDuaApp.arbicTypeFace);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 

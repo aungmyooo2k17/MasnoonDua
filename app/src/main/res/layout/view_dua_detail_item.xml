@@ -24,6 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+                android:textAlignment="center"
                 android:paddingLeft="@dimen/margin_medium_2"
                 android:paddingRight="@dimen/margin_medium_2"
                 android:paddingTop="@dimen/margin_medium_2"
@@ -37,17 +38,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_dua_tilte_s"
+                android:textAlignment="center"
                 android:gravity="center_horizontal"
                 android:paddingLeft="@dimen/margin_medium_2"
                 android:paddingRight="@dimen/margin_medium_2"
                 android:paddingTop="@dimen/margin_medium_2"
                 android:text=" اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُه"
                 android:textColor="@color/text_icon_color"
-                android:textSize="@dimen/text_regular_3x" />
+                android:textSize="@dimen/text_dua" />
 
             <TextView
                 android:id="@+id/tv_dua_translation_s"
                 android:layout_width="match_parent"
+                android:textAlignment="center"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_dua_s"
                 android:paddingBottom="@dimen/margin_medium_2"

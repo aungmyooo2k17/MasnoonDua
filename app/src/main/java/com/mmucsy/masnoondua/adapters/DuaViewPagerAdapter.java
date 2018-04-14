@@ -18,7 +18,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mmucsy.masnoondua.FavSharedPreference;
+import com.mmucsy.masnoondua.SharedPreference.FavSharedPreference;
 import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.data.models.Dua;
@@ -77,6 +77,7 @@ public class DuaViewPagerAdapter extends PagerAdapter {
 
         tvDuaTitle.setTypeface(MasnoonDuaApp.typeface);
         tvDuaTranslation.setTypeface(MasnoonDuaApp.typeface);
+        tvDua.setTypeface(MasnoonDuaApp.arbicTypeFace);
         tvDuaTitle.setText(duaList.get(position).getDuaTitle());
         tvDua.setText(duaList.get(position).getDuaArbic());
         tvDuaTranslation.setText(duaList.get(position).getDuaDescription());

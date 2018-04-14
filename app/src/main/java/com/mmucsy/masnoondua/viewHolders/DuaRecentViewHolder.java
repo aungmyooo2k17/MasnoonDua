@@ -50,6 +50,7 @@ public class DuaRecentViewHolder extends RecyclerView.ViewHolder {
 
     public void bind(int position) {
         tvDuaTitle.setTypeface(MasnoonDuaApp.typeface);
+        tvDuaArbic.setTypeface(MasnoonDuaApp.arbicTypeFace);
         tvDuaTitle.setText(duaList.get(position).getDuaTitle());
         tvDuaArbic.setText(duaList.get(position).getDuaArbic());
         int i = duaList.get(position).getCategory_id();

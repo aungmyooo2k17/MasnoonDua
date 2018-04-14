@@ -10,7 +10,6 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,12 +18,10 @@ import android.widget.TextView;
 
 import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
-import com.mmucsy.masnoondua.RecentSharedPreference;
-import com.mmucsy.masnoondua.adapters.DuaAdapter;
+import com.mmucsy.masnoondua.SharedPreference.RecentSharedPreference;
 import com.mmucsy.masnoondua.adapters.DuaRecentAdapter;
 import com.mmucsy.masnoondua.data.db.DatabaseAccess;
 import com.mmucsy.masnoondua.data.models.Dua;
-import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
 import com.mmucsy.masnoondua.delegates.DuaRecentItemDelegate;
 import com.mmucsy.masnoondua.delegates.MainPageItemDelegate;
 

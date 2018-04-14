@@ -2,17 +2,13 @@ package com.mmucsy.masnoondua.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Filter;
-import android.widget.Filterable;
 
 import com.mmucsy.masnoondua.R;
-import com.mmucsy.masnoondua.FavSharedPreference;
+import com.mmucsy.masnoondua.SharedPreference.FavSharedPreference;
 import com.mmucsy.masnoondua.data.models.Dua;
-import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
 import com.mmucsy.masnoondua.delegates.SearchItemDelegate;
 import com.mmucsy.masnoondua.viewHolders.SearchViewHolder;
 

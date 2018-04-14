@@ -31,7 +31,7 @@
     <dimen name="text_big_2x">60sp</dimen>
     <dimen name="text_big_3x">80sp</dimen>
 
-    <dimen name="text_dua_recent">26sp</dimen>
+    <dimen name="text_dua">26sp</dimen>
 
     <dimen name="activity_margin">16dp</dimen>
     <dimen name="dimen_8dp">8dp</dimen>

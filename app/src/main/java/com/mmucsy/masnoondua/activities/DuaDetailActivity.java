@@ -1,8 +1,5 @@
 package com.mmucsy.masnoondua.activities;
 
-import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffColorFilter;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
@@ -11,19 +8,17 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.mmucsy.masnoondua.FavSharedPreference;
+import com.mmucsy.masnoondua.SharedPreference.FavSharedPreference;
 import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.adapters.DuaViewPagerAdapter;
 import com.mmucsy.masnoondua.data.db.DatabaseAccess;
 import com.mmucsy.masnoondua.data.models.Category;
 import com.mmucsy.masnoondua.data.models.Dua;
-import com.mmucsy.masnoondua.fragments.FavouriteFragment;
 
 import java.util.List;
 

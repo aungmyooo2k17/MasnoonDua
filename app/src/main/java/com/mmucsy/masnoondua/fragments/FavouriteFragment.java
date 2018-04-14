@@ -1,9 +1,7 @@
 package com.mmucsy.masnoondua.fragments;
 
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,19 +13,15 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.mmucsy.masnoondua.FavSharedPreference;
+import com.mmucsy.masnoondua.SharedPreference.FavSharedPreference;
 import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.activities.DuaDetailActivity;
-import com.mmucsy.masnoondua.adapters.DuaAdapter;
 import com.mmucsy.masnoondua.adapters.FavoriteDuaAdapter;
-import com.mmucsy.masnoondua.data.models.Dua;
 import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
-import static java.security.AccessController.getContext;
 
 /**
  * A simple {@link Fragment} subclass.

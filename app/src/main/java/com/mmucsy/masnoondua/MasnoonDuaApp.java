@@ -3,8 +3,9 @@ package com.mmucsy.masnoondua;
 import android.app.Application;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
-import android.util.Log;
 
+import com.mmucsy.masnoondua.SharedPreference.FavSharedPreference;
+import com.mmucsy.masnoondua.SharedPreference.RecentSharedPreference;
 import com.mmucsy.masnoondua.data.db.DatabaseAccess;
 import com.mmucsy.masnoondua.data.models.Category;
 import com.mmucsy.masnoondua.data.models.Dua;
@@ -32,6 +33,7 @@ public class MasnoonDuaApp extends Application {
     public static FavSharedPreference favSharedPreference;
     public static RecentSharedPreference recentSharedPreference;
     public static Typeface typeface;
+    public static Typeface arbicTypeFace;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -52,5 +54,8 @@ public class MasnoonDuaApp extends Application {
 
         typeface = Typeface.createFromAsset(am,
                 String.format(Locale.US, "fonts/%s", "ZawgyiOne.ttf"));
+
+        arbicTypeFace = Typeface.createFromAsset(am,
+                String.format(Locale.US, "fonts/%s", "arabtype.ttf"));
     }
 }

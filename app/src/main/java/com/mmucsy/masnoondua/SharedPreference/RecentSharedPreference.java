@@ -1,4 +1,4 @@
-package com.mmucsy.masnoondua;
+package com.mmucsy.masnoondua.SharedPreference;
 
 import android.content.Context;
 import android.content.SharedPreferences;

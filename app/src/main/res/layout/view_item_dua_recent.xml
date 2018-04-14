@@ -19,6 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_medium"
         android:orientation="vertical">
 
         <TextView
@@ -40,7 +42,7 @@
             android:paddingRight="@dimen/margin_medium_2"
             android:text=" اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُه"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_regular_3x" />
+            android:textSize="@dimen/text_dua" />
     </LinearLayout>
 
 
