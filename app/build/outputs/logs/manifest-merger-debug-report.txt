@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-32:12
+ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-35:12
 MERGED from [com.android.support:design:26.1.0] /Users/aungmyooo/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/4babe51e846738db7e02d855606bb107/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/aungmyooo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1087c3bb076dad42d4ee65aed0b442d8/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/aungmyooo/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/f34c0dda4e38359bfc2197ed2e4a44a1/AndroidManifest.xml:2:1-11:12
@@ -24,20 +24,20 @@ MERGED from [com.android.support:support-core-ui:26.1.0] /Users/aungmyooo/.gradl
 MERGED from [com.android.support:support-compat:26.1.0] /Users/aungmyooo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9b4dbe7a4812705ea85376f8f63f6b10/AndroidManifest.xml:17:1-31:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] /Users/aungmyooo/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.6.1.aar/fb43965e4aa80e72b24ef7ff30ae43a9/AndroidManifest.xml:2:1-11:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/aungmyooo/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/d846439bef60eb15d601eb195eadf17e/AndroidManifest.xml:17:1-30:12
-INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-35:12
 	package
 		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:3:5-36
 		INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
-		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-32:12
+		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-35:12
 		INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
-		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-32:12
+		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:1-35:12
 		INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:2:11-69
@@ -50,7 +50,7 @@ ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/Androi
 	android:name
 		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:6:22-77
 application
-ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:8:5-30:19
+ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:8:5-33:19
 MERGED from [com.android.support:design:26.1.0] /Users/aungmyooo/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/4babe51e846738db7e02d855606bb107/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] /Users/aungmyooo/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/4babe51e846738db7e02d855606bb107/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/aungmyooo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1087c3bb076dad42d4ee65aed0b442d8/AndroidManifest.xml:25:5-29:19
@@ -100,39 +100,39 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/aungmyooo/.gradle/cach
 	android:name
 		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:9:9-38
 activity#com.mmucsy.masnoondua.activities.MainActivity
-ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:15:9-23:20
+ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:16:9-24:20
 	android:theme
-		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:17:13-56
+		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:18:13-56
 	android:name
-		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:16:13-52
+		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:17:13-52
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:18:13-22:29
+ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:19:17-69
+ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:19:25-66
+		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:21:17-77
+ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:22:17-77
 	android:name
-		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:21:27-74
+		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:22:27-74
 activity#com.mmucsy.masnoondua.activities.DuaDetailActivity
-ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:24:9-66
+ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:27:9-66
 	android:name
-		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:24:19-63
+		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:27:19-63
 activity#com.mmucsy.masnoondua.activities.DuaListActivity
-ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:25:9-64
+ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:28:9-64
 	android:name
-		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:25:19-61
+		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:28:19-61
 activity#com.mmucsy.masnoondua.activities.AboutActivity
-ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:26:9-62
+ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:29:9-62
 	android:name
-		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:26:19-59
+		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:29:19-59
 activity#com.mmucsy.masnoondua.activities.DuaSearchDetailActivity
-ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:27:9-29:55
+ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:30:9-32:55
 	android:theme
-		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:29:13-43
+		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:32:13-43
 	android:name
-		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:28:13-63
+		ADDED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml:31:13-63
 uses-sdk
 INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/AndroidManifest.xml

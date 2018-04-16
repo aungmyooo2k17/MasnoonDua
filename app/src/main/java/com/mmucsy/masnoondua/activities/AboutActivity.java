@@ -42,6 +42,7 @@ public class AboutActivity extends AppCompatActivity {
         imgWeb = findViewById(R.id.info1);
         imgEmail = findViewById(R.id.info3);
 
+
     }
 
     public void OpenWebsite(View v) {
@@ -52,12 +53,10 @@ public class AboutActivity extends AppCompatActivity {
     }
 
     public void OpenFacebook(View v) {
-
         Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
         String facebookUrl = getFacebookPageURL(this);
         facebookIntent.setData(Uri.parse(facebookUrl));
         startActivity(facebookIntent);
-
     }
 
     public void OpenEmail(View v) {

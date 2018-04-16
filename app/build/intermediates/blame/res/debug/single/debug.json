@@ -340,12 +340,12 @@
         "source": "/Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/src/main/res/drawable/ic_delete.xml"
     },
     {
-        "merged": "/Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
-        "source": "/Users/aungmyooo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1087c3bb076dad42d4ee65aed0b442d8/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_36dp.png"
-    },
-    {
         "merged": "/Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_design_ic_visibility_off.png.flat",
         "source": "/Users/aungmyooo/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/4babe51e846738db7e02d855606bb107/res/drawable-hdpi-v4/design_ic_visibility_off.png"
+    },
+    {
+        "merged": "/Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
+        "source": "/Users/aungmyooo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1087c3bb076dad42d4ee65aed0b442d8/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
         "merged": "/Users/aungmyooo/AndroidStudioProjects/MasnoonDua/app/build/intermediates/res/merged/debug/drawable_tooltip_frame_dark.xml.flat",

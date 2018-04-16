@@ -12,6 +12,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -21,6 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
         <activity android:name=".activities.DuaDetailActivity" />
         <activity android:name=".activities.DuaListActivity" />
         <activity android:name=".activities.AboutActivity" />
