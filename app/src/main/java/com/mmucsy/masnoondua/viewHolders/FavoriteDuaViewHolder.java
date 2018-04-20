@@ -10,8 +10,6 @@ import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.data.models.Dua;
 import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
 
-import net.aungpyaephyo.mmtextview.components.MMTextView;
-
 import java.util.List;
 
 import butterknife.BindView;

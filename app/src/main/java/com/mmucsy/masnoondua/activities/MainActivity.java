@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.annotation.NonNull;
@@ -16,9 +17,11 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.mmucsy.masnoondua.MasnoonDuaApp;
 import com.mmucsy.masnoondua.R;
 import com.mmucsy.masnoondua.delegates.MainPageItemDelegate;
 import com.mmucsy.masnoondua.fragments.FavouriteFragment;
@@ -47,14 +50,61 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         ButterKnife.bind(this);
 
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//            requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-//            requestPermissions(new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+            requestPermissions(new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+        }
+
+//        if (checkPermissionREAD_EXTERNAL_STORAGE(this)) {
+//            // do your stuff..
+//            Log.d(MasnoonDuaApp.TAG, "onCreate: "+checkPermissionREAD_EXTERNAL_STORAGE(this));
+//
+//            if (ContextCompat.checkSelfPermission(this,
+//                    Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+//                if (ActivityCompat.shouldShowRequestPermissionRationale(
+//                        (Activity) this,
+//                        Manifest.permission.READ_EXTERNAL_STORAGE)) {
+//                    showDialog("External storage", this,Manifest.permission.READ_EXTERNAL_STORAGE);
+//
+//                } else {
+//                    ActivityCompat
+//                            .requestPermissions(
+//                                    (Activity) this,
+//                                    new String[] { Manifest.permission.READ_EXTERNAL_STORAGE },
+//                                    MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+//                }
+//            } else {
+//
+//            }
 //        }
 
-        if (checkPermissionREAD_EXTERNAL_STORAGE(this)) {
-            // do your stuff..
-        }
+//        if (ContextCompat.checkSelfPermission(this,
+//                Manifest.permission.READ_EXTERNAL_STORAGE)
+//                != PackageManager.PERMISSION_GRANTED) {
+//            // Should we show an explanation?
+//            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+//                    Manifest.permission.READ_EXTERNAL_STORAGE)) {
+//                // Show an expanation to the user *asynchronously* -- don't block
+//                // this thread waiting for the user's response! After the user
+//                // sees the explanation, try again to request the permission.
+//            } else {
+//                if(isFirstTimeAskingPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)){
+//                    firstTimeAskingPermission(this,
+//                            Manifest.permission.READ_CONTACTS, false);
+//                    // No explanation needed, we can request the permission.
+//                    ActivityCompat.requestPermissions(this,
+//                            new String[]{Manifest.permission.READ_CONTACTS},
+//                            MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+//                    // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
+//                    // app-defined int constant. The callback method gets the
+//                    // result of the request.
+//                } else {
+//                    //Permission disable by device policy or user denied permanently. Show proper error message
+//                }
+//            }
+//        } else {
+//            //permission granted. do your stuff
+//        }
 
         loadFragment(new HomeFragment());
 
@@ -63,6 +113,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
+    }
+
+    public static void firstTimeAskingPermission(Context context, String permission, boolean isFirstTime){
+        SharedPreferences sharedPreference = context.getSharedPreferences("STORAGE", MODE_PRIVATE);
+        sharedPreference.edit().putBoolean(permission, isFirstTime).apply();
+    }
+
+    public static boolean isFirstTimeAskingPermission(Context context, String permission){
+        return context.getSharedPreferences("STORAGE", MODE_PRIVATE).getBoolean(permission, true);
     }
 
     public boolean checkPermissionREAD_EXTERNAL_STORAGE(
@@ -100,6 +159,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE:
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // do your stuff
+
                 } else {
                     Toast.makeText(this, "Denied",
                             Toast.LENGTH_SHORT).show();

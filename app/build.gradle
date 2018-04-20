@@ -4,10 +4,10 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.mmucsy.masnoondua"
-        minSdkVersion 21
+        minSdkVersion 17
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         javaCompileOptions {
             annotationProcessorOptions {
@@ -27,6 +27,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    aaptOptions {
+        cruncherEnabled = false
+    }
 }
 
 dependencies {
@@ -41,14 +45,6 @@ dependencies {
     //ButterKnife
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    //MMTextView
-    implementation 'net.aungpyaephyo:mmtextview:1.1'
-    compile 'com.google.code.gson:gson:2.8.2'
-    /*
-            // Room (use 1.1.0-alpha2 for latest alpha)
-            implementation "android.arch.persistence.room:runtime:1.0.0"
-            annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
-            */
     implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
     //Glide
     implementation('com.github.bumptech.glide:glide:4.6.1') {
@@ -57,4 +53,5 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:26.1.0'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.google.code.gson:gson:2.8.2'
 }

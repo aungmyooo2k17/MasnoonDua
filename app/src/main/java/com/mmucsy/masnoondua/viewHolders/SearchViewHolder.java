@@ -11,7 +11,6 @@ import com.mmucsy.masnoondua.data.models.Dua;
 import com.mmucsy.masnoondua.delegates.DuaItemDelegate;
 import com.mmucsy.masnoondua.delegates.SearchItemDelegate;
 
-import net.aungpyaephyo.mmtextview.components.MMTextView;
 
 import java.util.ArrayList;
 import java.util.List;
